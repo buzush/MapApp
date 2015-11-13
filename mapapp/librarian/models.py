@@ -34,7 +34,7 @@ class Content(models.Model):
     date = models.DateField(verbose_name="תאריך התוכן")
 
     def __str__(self):
-        return self.content_type+":",self.name
+        return self.content_type+":"+self.name
 
     class Meta:
         verbose_name = "תוכן"
