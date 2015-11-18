@@ -1,4 +1,4 @@
-from django.db import models
+from django.contrib.gis.db import models
 import datetime
 from django.utils import timezone
 
@@ -6,7 +6,7 @@ class Site(models.Model):
     site_id = models.AutoField(primary_key=True, verbose_name="מספר אתר")
     site_name = models.CharField(max_length=30, blank=False, verbose_name="שם אתר")
     additional_text = models.CharField(max_length=30, verbose_name="טקסט נוסף")
-    location = models.CharField(max_length=10,verbose_name="מיקום")
+    location = models.PointField(null=True)
     radius = models.PositiveSmallIntegerField(default="200", verbose_name="רדיוס")
 
     def __str__(self):
