@@ -18,6 +18,5 @@ from django.contrib import admin
 
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^sites/', include('clientapp.urls')),
-    url(r'^contents/', include('clientapp.urls'))
+    url(r'^edit/',include('editor.urls')),
 ]
