@@ -1,0 +1,43 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2015-11-25 17:32+0200\n"
+"PO-Revision-Date: 2015-11-25 17:32+0200\n"
+"Last-Translator: Noam\n"
+"Language-Team: \n"
+"Language: he\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.5.4\n"
+
+msgid "name"
+msgstr "שם"
+
+msgid "additional text"
+msgstr "טקסט נוסף"
+
+msgid "location"
+msgstr "מיקום"
+
+msgid "radius"
+msgstr "רדיוס"
+
+msgid "site"
+msgstr "אתר"
+
+msgid "sites"
+msgstr "אתרים"
+
+msgid "content"
+msgstr "תוכן"
+
+msgid "Map Story"
+msgstr "סיפורי דרך"

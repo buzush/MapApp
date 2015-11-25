@@ -1,24 +1,24 @@
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
+from django.utils.translation import ugettext_lazy as _
 
 class Site(models.Model):
-    site_id = models.AutoField(primary_key=True, verbose_name="מספר אתר")
-    site_name = models.CharField(max_length=30, blank=False, verbose_name="שם אתר")
-    additional_text = models.CharField(max_length=30, verbose_name="טקסט נוסף")
-    location = models.PointField(default=Point(x=3736198,y=3922079))
-    radius = models.PositiveSmallIntegerField(default="200", verbose_name="רדיוס")
+    name = models.CharField(_("name"), max_length=30, blank=False)
+    additional_text = models.CharField(_('additional text'), max_length=30)
+    location = models.PointField(_('location'), default=Point(x=37.36198, y=39.22079))
+    radius = models.PositiveSmallIntegerField(_('radius'), default=200)
 
     def __str__(self):
         return self.site_name
 
     class Meta:
-        verbose_name = "אתר"
-        verbose_name_plural= "אתרים"
+        verbose_name = _('site')
+        verbose_name_plural =  _('sites')
+
 
 class Content(models.Model):
-    site = models.ForeignKey(Site, verbose_name="אתר מקושר",blank=False)
-    content_id = models.AutoField(primary_key=True)
-    CONTENT_TYPES =(
+    site = models.ForeignKey(Site, verbose_name="אתר מקושר")
+    CONTENT_TYPES = (
         ("IMG", "תמונה"),
         ("SNG", "שיר"),
         ("MAP", "מפה"),
@@ -26,15 +26,18 @@ class Content(models.Model):
         ("VID", "קטע וידאו"),
         ("OTR", "אחר"),
     )
-    content_type = models.CharField(max_length=3,choices=CONTENT_TYPES,blank=False,verbose_name="סוג התוכן")
-    name = models.CharField(verbose_name="שם או כותרת",max_length=20)
-    description = models.CharField(verbose_name="תיאור התוכן",max_length=200)
-    link = models.URLField(verbose_name="קישור לתוכן",blank=False)
-    date = models.DateField(verbose_name="תאריך התוכן")
+    content_type = models.CharField("סוג התוכן", max_length=3, choices=CONTENT_TYPES)
+    name = models.CharField("שם או כותרת", max_length=20)
+    description = models.CharField("תיאור התוכן", max_length=200)
+    link = models.URLField("קישור לתוכן")
+    date = models.DateField("תאריך התוכן")
 
     def __str__(self):
-        return self.content_type+":"+self.name
+        return "{}: {}".format(
+            self.get_content_type_display(),
+            self.name
+        )
 
     class Meta:
-        verbose_name = "תוכן"
+        verbose_name = _("content")
         verbose_name_plural = "תכנים"
