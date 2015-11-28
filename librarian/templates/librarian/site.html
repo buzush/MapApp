@@ -1,11 +1,19 @@
-    <div class="col-md-4 portfolio-item">
+    <div class="card col-md-4 text-center" z-default=20 z-hover=50>
         <a href="#">
-            <img class="img-responsive" src="http://placehold.it/700x400" alt="">
+            <img class="card-img-top img-responsive" src="http://placehold.it/700x400" alt="">
         </a>
-            <h3>
-            <a href="#">{{name}} </a>
-            </h3>
-        <p>{{additional_text}}</p>
-        <p>{{location}}</p>
-        <p>{{radius}}</p>
+
+        <div class="card-block">
+            <h4 class="card-title">
+                <a href="#">
+                    {{name}}
+                </a>
+            </h4>
+        </div>
+
+        <div class="card-block">
+            <p class="card-text">{{additional_text}}</p>
+            <a href="#" class="btn btn-primary">עריכה</a>
+        </div>
+
     </div>

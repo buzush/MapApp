@@ -9,15 +9,13 @@ body {
     direction: rtl;
 }
 
-.portfolio-item {
+.card {
     margin-bottom: 25px;
 }
 
 footer {
     margin: 50px 0;
 }
-
-
 
 /* general text decorations  */
 .text-left {
