@@ -14,18 +14,13 @@
         </div>
         <!-- /.row -->
 
-        <!-- Projects Row -->
-        {% for site in sites %}
-            {% if forloop.first %}
-               <div class="row">
-            {% endif %}
-            {% include "librarian/site.html" with name=site.name additional_text=site.additional_text location=site.location radius=site.radius only %}
-            {% if forloop.counter|divisibleby:3 %}</div><div class="row">{% endif %}
-            {% if forloop.last %}</div>{% endif %}
-        {% endfor %}
+        <div class="card-deck-wrapper">
+            <div class="card-deck">
+                {% for site in sites %}
+                {% include "librarian/site.html" with name=site.name additional_text=site.additional_text location=site.location radius=site.radius only %}
+                {% endfor %}
+            </div>
         </div>
-        <!-- end of row -->
-
         <!-- card-depth JavaScript -->
 
         <!-- Pagination -->
