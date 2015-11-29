@@ -14,14 +14,18 @@
         </div>
         <!-- /.row -->
 
-        <div class="card-deck-wrapper">
-            <div class="card-deck">
+        <!-- Sites list -->
+            <div class="container">
+                <!-- Sites row -->
                 {% for site in sites %}
+                    {% if forloop.first %}
+                        <div class="row">
+                    {% endif %}
                 {% include "librarian/site.html" with name=site.name additional_text=site.additional_text location=site.location radius=site.radius only %}
+                    {% if forloop.last %} </div>{% endif %}
                 {% endfor %}
             </div>
-        </div>
-        <!-- card-depth JavaScript -->
+
 
         <!-- Pagination -->
         <div class="row text-center">

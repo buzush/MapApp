@@ -9,9 +9,6 @@ body {
     direction: rtl;
 }
 
-.card {
-    margin-bottom: 25px;
-}
 
 footer {
     margin: 50px 0;
@@ -30,6 +27,11 @@ footer {
   text-align: center;
 }
 
-.col-md-4 {
+.card {
     float: right !important;
+    height: 300px;
+    width: 200px;
+    margin: 25px;
+    padding: 10px;
+    display: block;
 }

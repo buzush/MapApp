@@ -4,15 +4,12 @@ function shadow(int){
 
 function update(){
   var list = document.getElementsByClassName("card"); //loop through all HTML elements with the class card. 
-  var list = document.getElementsByTagName("card"); 
+  //var list = document.getElementsByTagName("card");
   //uncomment line above if you want to use <card> instead of <div class='card'>
   var len = list.length;
   for(i=0;i<len;i++){
     list[i].style.display="block";
-    if(!list[i].hasAttribute("no-margin")) //set default styles if no contradicting attributes exist
-    	list[i].style.margin="25px";
-    if(!list[i].hasAttribute("no-height"))
-    	list[i].style.height="100px";
+
     if(!list[i].hasAttribute("no-transition"))
     	list[i].style.transition=".15s box-shadow";
     if(!list[i].hasAttribute("no-padding"))
