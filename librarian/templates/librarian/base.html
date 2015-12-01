@@ -3,7 +3,6 @@
 <html>
     <head>
         <title>סיפורי דרכים</title>
-        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
         <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
 
         <meta charset="utf-8">
@@ -14,6 +13,7 @@
 
         <!-- Bootstrap Core CSS -->
         <link href="{% static 'librarian/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'librarian/css/bootstrap-rtl.css' %}">
 
         <!-- Custom CSS -->
         <link href="{% static 'librarian/css/3-col-portfolio.css' %}" rel="stylesheet">
@@ -47,7 +47,7 @@
         <footer>
             <div class="row">
                 <div class="col-lg-12">
-                    <p>Copyright &copy; Your Website 2014</p>
+                    <p>גרסת פיתוח</p>
                 </div>
             </div>
             <!-- /.row -->
@@ -62,5 +62,7 @@
         <!-- Cards-depth.js -->
         <script src="{% static 'librarian/js/card-depth.js' %}"></script>
 
+        <!-- editor js scripts -->
+        <script src="{% static 'librarian/js/editor.js' %}"></script>
     </body>
 </html>

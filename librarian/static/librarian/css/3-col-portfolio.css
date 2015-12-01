@@ -4,6 +4,54 @@
  * For details, see http://www.apache.org/licenses/LICENSE-2.0.
  */
 
+
+.editor_frame{
+    display:none;     /* hidden by default, until card is being chosen */
+    border: solid 1px;
+    border-radius: 30px;
+    box-shadow: 0 0 4px #555555;
+    width: 80%;
+    height: 80%;
+    position: fixed;
+    left: 10%;
+    top: 10%;
+    background: white;
+    opacity: 0.98;
+    padding: 1% 2%;
+
+}
+
+.toolbar {
+    text-align: center;
+
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+.clickable:hover {
+        text-shadow: 0 0 8px #14ADE0; }
+
+.map_area {    /* area for Open Street Map widget on the editor view */
+   width: 50%;
+   height: 50%;
+   border: solid 1px;
+
+}
+
+.site_editor, .content_editor, .content_picker {
+    height: 90%;
+    direction: rtl;
+    padding: 2%;
+}
+
+.right_scroll_frame {
+    direction:ltr;
+    overflow: auto;
+
+}
+
 body {
     padding-top: 70px; /* Required padding for .navbar-fixed-top. Remove if using .navbar-static-top. Change if height of navigation changes. */
     direction: rtl;
@@ -34,4 +82,13 @@ footer {
     margin: 25px;
     padding: 10px;
     display: block;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
 }
