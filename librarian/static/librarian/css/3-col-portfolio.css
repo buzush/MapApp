@@ -40,15 +40,17 @@
 
 }
 
+
 .site_editor, .content_editor, .content_picker {
-    height: 90%;
     direction: rtl;
     padding: 2%;
+
 }
 
 .right_scroll_frame {
     direction:ltr;
     overflow: auto;
+    height: 80%;
 
 }
 
@@ -60,6 +62,7 @@ body {
 
 footer {
     margin: 50px 0;
+    position: fixed;
 }
 
 /* general text decorations  */
