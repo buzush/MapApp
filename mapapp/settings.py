@@ -41,7 +41,6 @@ INSTALLED_APPS = (
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
     'librarian',
-    'editor',
     'clientapp',
 )
 

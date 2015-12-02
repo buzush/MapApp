@@ -1,13 +1,10 @@
+<div class="card text-center col-md-4 noselect clickable" id={{site.id}} z-default=5 z-hover=8>
+    <div class="row">
+        <h3 class="bg-primary"><a href="{{site.get_absolute_url}}">{{site.name}}</a></h3>
 
- <div class="card text-center col-md-4 noselect clickable" id={{id}} z-default=5 z-hover=8>
-        <div class="row">
-                 <h3 class="bg-primary">   {{name}} </h3>
-
-        </div>
-
-        <div class="row">
-            <p class="card-text">{{additional_text}}</p>
-
-
-        </div>
     </div>
+
+    <div class="row">
+        <p class="card-text">{{site.additional_text}}</p>
+    </div>
+</div>

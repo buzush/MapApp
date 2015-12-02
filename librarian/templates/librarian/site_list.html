@@ -21,7 +21,7 @@
                     {% if forloop.first %}
                         <div class="row">
                     {% endif %}
-                {% include "librarian/site.html" with id=site.id name=site.name additional_text=site.additional_text location=site.location radius=site.radius only %}
+                {% include "librarian/site.html" %}
                     {% if forloop.last %} </div>{% endif %}
                 {% endfor %}
             </div>

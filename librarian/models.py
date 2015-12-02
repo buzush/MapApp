@@ -1,5 +1,6 @@
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
+from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
 class Site(models.Model):
@@ -10,6 +11,9 @@ class Site(models.Model):
 
     def __str__(self):
         return self.name
+
+    def get_absolute_url(self):
+        return reverse("view_site", args=(self.pk,))
 
     class Meta:
         verbose_name = _('site')

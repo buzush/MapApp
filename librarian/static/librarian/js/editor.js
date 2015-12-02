@@ -4,7 +4,4 @@ $(document).ready(function(){
         $(".editor_frame").fadeOut();
         })
 
-    $(".card").click(function(){
-        $(".editor_frame").fadeIn();
-        })
     });
