@@ -13,7 +13,12 @@ def editor_menu(request):
     return render(request, 'librarian/site_list.html', {"sites": sites})
 
 
-class AddSite(CreateView):
+class SiteCreateView(CreateView):
+    model = Site
+    fields = ['name', 'additional_text', 'location', 'radius']
+
+
+class SiteUpdateView(UpdateView):
     model = Site
     fields = ['name', 'additional_text', 'location', 'radius']
 

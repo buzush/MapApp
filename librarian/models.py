@@ -15,6 +15,9 @@ class Site(models.Model):
     def get_absolute_url(self):
         return reverse("view_site", args=(self.pk,))
 
+    def get_edit_url(self):
+        return reverse("update_site", args=(self.pk,))
+
     class Meta:
         verbose_name = _('site')
         verbose_name_plural =  _('sites')
