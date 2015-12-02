@@ -233,9 +233,3 @@ zalmania_url_1 = 'http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.
 
 # Travel
 # TODO
-
-test_url_list = [ephemera_url_1, jewish_art_url_1, map_url_1, map_url_2, bitmuna_url_1, zalmania_url_1]
-
-for url in test_url_list:
-    #print(get_json_url(get_doc_id(url)))
-    print(get_metadata_dict(url))
