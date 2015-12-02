@@ -1,0 +1,24 @@
+{% load staticfiles %}
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Client Map</title>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"/>
+    <link
+            rel="stylesheet"
+            href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
+    />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+</head>
+<body>
+<div id="map" data-url="{% url "sites" %}" style="width: 600px; height: 400px"></div>
+
+<button type="button">Share Media</button>
+
+<script src="{% static "js/map.js" %}">
+
+</script>
+</body>
+</html>

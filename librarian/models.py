@@ -9,7 +9,7 @@ class Site(models.Model):
     radius = models.PositiveSmallIntegerField(_('radius'), default=200)
 
     def __str__(self):
-        return self.site_name
+        return self.name
 
     class Meta:
         verbose_name = _('site')
