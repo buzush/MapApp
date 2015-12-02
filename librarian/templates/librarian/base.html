@@ -1,0 +1,68 @@
+{% load staticfiles %}
+
+<html>
+    <head>
+        <title>סיפורי דרכים</title>
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <!-- Bootstrap Core CSS -->
+        <link href="{% static 'librarian/css/bootstrap.min.css' %}" rel="stylesheet">
+        <link rel="stylesheet" href="{% static 'librarian/css/bootstrap-rtl.css' %}">
+
+        <!-- Custom CSS -->
+        <link href="{% static 'librarian/css/3-col-portfolio.css' %}" rel="stylesheet">
+
+
+        <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+        <!--[if lt IE 9]>
+        <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+        <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+        <![endif]-->
+
+
+    </head>
+    <body>
+        <div class="page-header text-center">
+            <h1><a href="/">
+                סיפורי דרכים
+            </a></h1>
+        </div>
+
+        <div class="content container">
+            <div class="row">
+                    {% block content %}
+                    {% endblock %}
+            </div>
+        </div>
+
+
+        <!-- Footer -->
+        <footer>
+            <div class="row">
+                <div class="col-lg-12">
+                    <p>גרסת פיתוח</p>
+                </div>
+            </div>
+            <!-- /.row -->
+        </footer>
+
+        <!-- jQuery -->
+        <script src="{% static 'librarian/js/jquery.js' %}"></script>
+
+        <!-- Bootstrap Core JavaScript -->
+        <script src="{% static 'librarian/js/bootstrap.min.js' %}"></script>
+
+        <!-- Cards-depth.js -->
+        <script src="{% static 'librarian/js/card-depth.js' %}"></script>
+
+        <!-- editor js scripts -->
+        <script src="{% static 'librarian/js/editor.js' %}"></script>
+    </body>
+</html>

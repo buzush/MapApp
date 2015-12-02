@@ -1,0 +1,65 @@
+{% extends 'librarian/base.html' %}
+
+            {% block content %}
+
+    <div class="container">
+
+        <!-- Page Header -->
+        <div class="row">
+            <div class="col-lg-12">
+                <h1 class="page-header">ממשק עריכה
+                    <small>אתרים</small>
+                </h1>
+            </div>
+        </div>
+        <!-- /.row -->
+
+        <!-- Sites list -->
+            <div class="container">
+                <!-- Sites row -->
+                {% for site in sites %}
+                    {% if forloop.first %}
+                        <div class="row">
+                    {% endif %}
+                {% include "librarian/site.html" with name=site.name additional_text=site.additional_text location=site.location radius=site.radius only %}
+                    {% if forloop.last %} </div>{% endif %}
+                {% endfor %}
+            </div>
+
+        <!--- sites and content editor menu --->
+            <div class="editor_frame container">
+                {% include "librarian/edit_site.html" %}
+            </div>
+
+        <!-- Pagination -->
+        <div class="row text-center">
+            <div class="col-lg-12">
+                <ul class="pagination">
+                    <li>
+                        <a href="#">&laquo;</a>
+                    </li>
+                    <li class="active">
+                        <a href="#">1</a>
+                    </li>
+                    <li>
+                        <a href="#">2</a>
+                    </li>
+                    <li>
+                        <a href="#">3</a>
+                    </li>
+                    <li>
+                        <a href="#">4</a>
+                    </li>
+                    <li>
+                        <a href="#">5</a>
+                    </li>
+                    <li>
+                        <a href="#">&raquo;</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        </div>
+        <!-- /.row -->
+
+            {% endblock %}
