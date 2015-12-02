@@ -1,36 +1,53 @@
-from django.shortcuts import render
-from django.http import HttpResponse
-from django.views.generic import UpdateView, DetailView
-from django.views.generic.edit import CreateView, FormView
+from django.shortcuts import get_object_or_404
 
-from .li_api import get_metadata_dict
-from librarian import forms
-from .models import Site
+from django.views.generic import UpdateView, DetailView, ListView
+from django.views.generic.edit import CreateView
+
+from . import models
 
 
-def editor_menu(request):
-    sites = Site.objects.all()
-    return render(request, 'librarian/site_list.html', {"sites": sites})
-
-
-class SiteCreateView(CreateView):
-    model = Site
-    fields = ['name', 'additional_text', 'location', 'radius']
-
-
-class SiteUpdateView(UpdateView):
-    model = Site
-    fields = ['name', 'additional_text', 'location', 'radius']
+class SiteListView(ListView):
+    model = models.Site
 
 
 class SiteDetailView(DetailView):
-    model = Site
+    model = models.Site
 
 
-def site(request, site_id):
-    return HttpResponse("hello world %s" % site_id)
+class SiteMixin:
+    model = models.Site
+    fields = ['name', 'additional_text', 'location', 'radius']
 
 
-class EditSiteView(UpdateView):
-    model = Site
-    form_class = forms.SiteForm
+class SiteCreateView(SiteMixin, CreateView):
+    pass
+
+
+class SiteUpdateView(SiteMixin, UpdateView):
+    pass
+
+
+class ContentMixin:
+    model = models.Content
+    fields = [
+        'content_type',
+        'name',
+        'description',
+        'link',
+        'date',
+    ]
+
+    def dispatch(self, request, *args, **kwargs):
+        self.site = get_object_or_404(models.Site, pk=self.kwargs['site_pk'])
+        return super().dispatch(request, *args, **kwargs)
+
+
+class ContentCreateView(ContentMixin, CreateView):
+    def form_valid(self, form):
+        # THIS RUNS BEFORE SAVE
+        form.instance.site = self.site
+        return super().form_valid(form)
+
+
+class ContentUpdateView(ContentMixin, UpdateView):
+    pass

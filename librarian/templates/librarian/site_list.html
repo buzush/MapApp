@@ -14,16 +14,12 @@
         </div>
         <!-- /.row -->
 
-        <!-- Sites list -->
             <div class="container">
-                <!-- Sites row -->
-                {% for site in sites %}
-                    {% if forloop.first %}
-                        <div class="row">
-                    {% endif %}
-                {% include "librarian/site.html" %}
-                    {% if forloop.last %} </div>{% endif %}
-                {% endfor %}
+                <div class="row">
+                    {% for site in object_list %}
+                        {% include "librarian/site.html" %}
+                    {% endfor %}
+                </div>
             </div>
 
         <!--- sites and content editor menu --->
