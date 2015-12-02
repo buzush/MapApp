@@ -41,7 +41,8 @@ INSTALLED_APPS = (
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
     'librarian',
-
+    'editor',
+    'clientapp',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -108,3 +109,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+if os.name == 'nt':
+    OSGEO4W = r"C:\OSGeo4W"
+    os.environ['OSGEO4W_ROOT'] = OSGEO4W
+    os.environ['GDAL_DATA'] = OSGEO4W + r"\share\gdal"
+    os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
+    os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']

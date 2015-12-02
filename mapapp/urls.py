@@ -21,4 +21,5 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', include(admin.site.urls)),
     url(r'^edit/',include('librarian.urls')),
+    url(r'^clientapp/', include('clientapp.urls')),
 ]
