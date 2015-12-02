@@ -4,11 +4,11 @@
             </div>
 
     <div class="row">
-
+        <form role="form">
             <div class="row col-sm-6">
                 <h2> שם האתר</h2>
                 <div class="right_scroll_frame">
-                    <div class="site_editor">
+                    <div class="form-group site_editor">
                         <p>שם האתר</p>
                         <p> additional_text </p>
                         <p> location </p>
@@ -35,7 +35,7 @@
                 <h2 class="text-center">תכנים קשורים</h2>
                 <div class="row col-sm-2 col-md-3">
                     <div class="right_scroll_frame">
-                        <div class="content_picker">
+                        <div class="form-group content_picker">
                             <p>תוכן</p>
                             <p>תוכן</p>
                             <p>תוכן</p>
@@ -55,8 +55,27 @@
                 <div class="row col-sm-4 col-md-3">
                     <div class="right_scroll_frame">
                         <div class="content_editor">
-                            <p>כותרת התוכן</p>
-                            <p>content_type</p>
+                            <div class="form-group">
+                                <label for="title">כותרת התוכן</label>
+                                <input type="text" class="form-control" id="title">
+                            </div>
+                            <div class="form-group">
+                                <label for="type">סוג התוכן</label>
+                                <select class="form-control" id="type">
+                                    <option>שיר</option>
+                                    <option>ספר</option>
+                                    <option>מסמך</option>
+                                    <option>ווידאו</option><option>שיר</option>
+                                    <option>שמע</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label for="site_description" >תיאור</label>
+                                <input type="textarea" class="form-control" id="site_description">
+                            </div>
+
+                            </div>
+
                             <p>description</p>
                             <p>link</p>
                             <p>date</p>
@@ -71,4 +90,5 @@
                     </div>
                 </div>
             </div>
+        </form>
     </div>

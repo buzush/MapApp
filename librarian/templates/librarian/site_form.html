@@ -1,0 +1,21 @@
+{% extends "librarian/base.html" %}
+{% load i18n bootstrap3%}
+{% block content %}
+<form method="post">
+    {% csrf_token %}
+    {{form.media}}
+    <div class="row">
+        <div class="col-md-6">
+            {% bootstrap_form_errors form "non_fields" %}
+            {% bootstrap_field form.name %}
+            {% bootstrap_field form.additional_text %}
+            {% bootstrap_field form.radius %}
+
+        </div>
+        <div class="col-md-6">
+            {{ form.location }}
+        </div>
+    </div>
+    <button>{% trans "Save" %}</button>
+</form>
+{% endblock %}

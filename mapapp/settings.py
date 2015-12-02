@@ -38,8 +38,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
     'librarian',
+
 )
 
 MIDDLEWARE_CLASSES = (
