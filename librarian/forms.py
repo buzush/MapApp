@@ -9,3 +9,9 @@ class SiteForm(forms.ModelForm):
         model = models.Site
         exclude = (
         )
+
+class ContentForm(forms.ModelForm):
+    class Meta:
+        model = models.Content
+        exclude = (
+        )
