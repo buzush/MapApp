@@ -45,6 +45,12 @@ class Content(models.Model):
             self.name
         )
 
+    def get_absolute_url(self):
+        return reverse("view_content", args=(self.pk,))
+
+
     class Meta:
         verbose_name = _("content")
         verbose_name_plural = "תכנים"
+
+

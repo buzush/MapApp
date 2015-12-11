@@ -1,0 +1,15 @@
+{% extends 'librarian/base.html' %}
+
+            {% block content %}
+
+
+            <div class="container">
+                <div class="row">
+                    {% for content in object_list %}
+                        {% include "librarian/content.html" %}
+                    {% endfor %}
+                </div>
+            </div>
+
+
+            {% endblock %}

@@ -42,6 +42,14 @@ class ContentMixin:
         return super().dispatch(request, *args, **kwargs)
 
 
+class ContentListView(ListView):
+    model = models.Content
+
+
+class ContentDetailView(DetailView):
+    model = models.Content
+
+
 class ContentCreateView(ContentMixin, CreateView):
     def form_valid(self, form):
         # THIS RUNS BEFORE SAVE
