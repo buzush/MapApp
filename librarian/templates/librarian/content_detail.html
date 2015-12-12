@@ -1,10 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+{% extends 'librarian/base.html' %}
+{% load i18n %}
+{% block content %}
 
-</body>
-</html>
+    <div>
+
+        <h1>{{content.name}}</h1>
+        <p>{{content.id}}</p>
+        <p>{{content.site}}</p>
+        <p>{{content.content_type}}</p>
+        <p>{{content.description}}</p>
+        <p>{{content.link}}</p>
+        <p>{{content.date}}</p>
+
+        <a class="btn btn-default" href="{{ site.get_edit_url }}">
+            <i class="glyphicon glyphicon-pencil"></i>
+            {% trans "Edit" %}
+        </a>
+
+    </div>
+
+{% endblock %}
