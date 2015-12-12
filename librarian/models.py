@@ -46,7 +46,7 @@ class Content(models.Model):
         )
 
     def get_absolute_url(self):
-        return reverse("view_content", args=(self.pk,))
+        return reverse("view_content", args=(self.site.id,self.pk))
 
 
     class Meta:
