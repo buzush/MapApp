@@ -1,6 +1,7 @@
 {% extends "librarian/base.html" %}
 {% load i18n bootstrap3%}
 {% block content %}
+content_form.html
 <form method="post">
     {% csrf_token %}
     {{form.media}}

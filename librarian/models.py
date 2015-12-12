@@ -49,6 +49,11 @@ class Content(models.Model):
         return reverse("view_content", args=(self.site.id,self.pk))
 
 
+
+    def get_edit_url(self):
+        return reverse("update_content", args=(self.site.id,self.pk))
+
+
     class Meta:
         verbose_name = _("content")
         verbose_name_plural = "תכנים"
