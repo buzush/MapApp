@@ -1,6 +1,6 @@
 from django.shortcuts import get_object_or_404
 
-from django.views.generic import UpdateView, DetailView, ListView
+from django.views.generic import UpdateView, DetailView, ListView, DeleteView
 from django.views.generic.edit import CreateView
 
 from . import models
@@ -20,6 +20,10 @@ class SiteMixin:
 
 
 class SiteCreateView(SiteMixin, CreateView):
+    pass
+
+class SiteDeleteView(SiteMixin, DeleteView):
+    success_url = '/lib/'
     pass
 
 
