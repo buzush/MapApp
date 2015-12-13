@@ -57,5 +57,3 @@ class Content(models.Model):
     class Meta:
         verbose_name = _("content")
         verbose_name_plural = "תכנים"
-
-

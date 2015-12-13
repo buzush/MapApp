@@ -1,5 +1,5 @@
 from django.shortcuts import get_object_or_404
-
+from django.core.urlresolvers import reverse
 from django.views.generic import UpdateView, DetailView, ListView, DeleteView
 from django.views.generic.edit import CreateView
 
@@ -63,3 +63,8 @@ class ContentCreateView(ContentMixin, CreateView):
 
 class ContentUpdateView(ContentMixin, UpdateView):
     pass
+
+class ContentDeleteView(ContentMixin, DeleteView):
+    def get_success_url(self):
+        return reverse('content_list',kwargs={'site_pk':self.site.id})
+
