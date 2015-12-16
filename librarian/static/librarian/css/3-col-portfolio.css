@@ -72,6 +72,11 @@ footer {
 }
 
 /* general text decorations  */
+
+.site-title {
+    color: white;
+}
+
 .text-left {
   text-align: left;
 }

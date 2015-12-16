@@ -13,6 +13,4 @@ urlpatterns = [
     url(r'^(?P<site_pk>\d+)/(?P<pk>\d+)/$', views.ContentDetailView.as_view(), name='view_content'),
     url(r'^(?P<site_pk>\d+)/(?P<pk>\d+)/edit/$', views.ContentUpdateView.as_view(), name='update_content'),
     url(r'^(?P<site_pk>\d+)/(?P<pk>\d+)/delete/$', views.ContentDeleteView.as_view(), name='delete_content'),
-
-
 ]
