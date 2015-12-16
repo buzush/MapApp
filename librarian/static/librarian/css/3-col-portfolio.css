@@ -33,6 +33,12 @@
 .clickable:hover {
         text-shadow: 0 0 8px #14ADE0; }
 
+#####
+.bg-primary {
+    color: #FFF !important;
+}
+####
+
 .map_area {    /* area for Open Street Map widget on the editor view */
    width: 50%;
    height: 50%;

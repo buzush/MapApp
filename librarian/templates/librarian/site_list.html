@@ -10,52 +10,25 @@
                 <h1 class="page-header">ממשק עריכה
                     <small>אתרים</small>
                 </h1>
+                <a class="btn btn-default" href="{% url 'add_site' %}">הוספת אתר</a>
             </div>
         </div>
         <!-- /.row -->
 
-            <div class="container">
-                <div class="row">
-                    {% for site in object_list %}
-                        {% include "librarian/site.html" %}
-                    {% endfor %}
-                </div>
+        <div class="container">
+            <div class="row">
+                {% for site in object_list %}
+                    {% include "librarian/site.html" %}
+                {% endfor %}
             </div>
+       </div>
 
-        <!--- sites and content editor menu --->
-            <div class="editor_frame container">
-                {% include "librarian/edit_site.html" %}
-            </div>
+       <!--- sites and content editor menu --->
+       <div class="editor_frame container">
+            {% include "librarian/edit_site.html" %}
+       </div>
 
-        <!-- Pagination -->
-        <div class="row text-center">
-            <div class="col-lg-12">
-                <ul class="pagination">
-                    <li>
-                        <a href="#">&laquo;</a>
-                    </li>
-                    <li class="active">
-                        <a href="#">1</a>
-                    </li>
-                    <li>
-                        <a href="#">2</a>
-                    </li>
-                    <li>
-                        <a href="#">3</a>
-                    </li>
-                    <li>
-                        <a href="#">4</a>
-                    </li>
-                    <li>
-                        <a href="#">5</a>
-                    </li>
-                    <li>
-                        <a href="#">&raquo;</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-        </div>
+    </div>
         <!-- /.row -->
 
             {% endblock %}
