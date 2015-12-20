@@ -4,8 +4,11 @@ decorator==4.0.4
 Django==1.8.6
 django-bootstrap3==6.2.2
 django-floppyforms==1.5.2
+django-geojson==2.8.1
+django-leaflet==0.17.1
 ipython==4.0.0
 ipython-genutils==0.1.0
+jsonfield==1.0.3
 livereload==2.4.0
 lxml==3.4.4
 path.py==8.1.2
