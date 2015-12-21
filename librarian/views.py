@@ -1,3 +1,5 @@
+from authtools.views import LoginRequiredMixin
+from django.contrib.gis.geos import Point
 from django.shortcuts import get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views.generic import UpdateView, DetailView, ListView, DeleteView
@@ -5,22 +7,29 @@ from django.views.generic.edit import CreateView
 
 from . import models
 
+DEFAULT_CENTER = Point(x=35.093303, y=31.976406)
 
-class SiteListView(ListView):
+
+class SiteListView(LoginRequiredMixin, ListView):
     model = models.Site
 
 
-class SiteDetailView(DetailView):
+class SiteDetailView(LoginRequiredMixin, DetailView):
     model = models.Site
 
 
-class SiteMixin:
+class SiteMixin(LoginRequiredMixin):
     model = models.Site
     fields = ['name', 'additional_text', 'location', 'radius']
 
 
 class SiteCreateView(SiteMixin, CreateView):
-    pass
+    def get_initial(self):
+        d = super().get_initial()
+        d['location'] = DEFAULT_CENTER
+        return d
+
+
 
 class SiteDeleteView(SiteMixin, DeleteView):
     success_url = '/lib/'
@@ -31,7 +40,7 @@ class SiteUpdateView(SiteMixin, UpdateView):
     pass
 
 
-class ContentMixin:
+class ContentMixin(LoginRequiredMixin):
     model = models.Content
     fields = [
         'content_type',
@@ -46,11 +55,11 @@ class ContentMixin:
         return super().dispatch(request, *args, **kwargs)
 
 
-class ContentListView(ListView):
+class ContentListView(LoginRequiredMixin, ListView):
     model = models.Content
 
 
-class ContentDetailView(DetailView):
+class ContentDetailView(LoginRequiredMixin, DetailView):
     model = models.Content
 
 
@@ -64,7 +73,7 @@ class ContentCreateView(ContentMixin, CreateView):
 class ContentUpdateView(ContentMixin, UpdateView):
     pass
 
+
 class ContentDeleteView(ContentMixin, DeleteView):
     def get_success_url(self):
-        return reverse('content_list',kwargs={'site_pk':self.site.id})
-
+        return reverse('content_list', kwargs={'site_pk': self.site.id})

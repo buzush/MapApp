@@ -30,10 +30,20 @@
     </head>
     <body>
         <div class="page-header text-center">
-            <h1><a href="/">
+            <h1>
+                <a href="/">
                 סיפורי דרכים
             </a></h1>
-        </div>
+            <div class="pull-right">
+                {% if user.is_authenticated %}
+                {{ user }}
+                <a class="btn btn-default" href="{% url "logout" %}">Logout</a>
+                {% else %}
+                <a class="btn btn-primary" href="{% url "login" %}">Login</a>
+                {% endif %}
+            </div>
+
+            </div>
 
         <div class="content container">
             <div class="row">

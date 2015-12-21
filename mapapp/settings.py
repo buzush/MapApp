@@ -31,7 +31,6 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = (
-    'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
     'django.contrib.sessions',
@@ -40,8 +39,10 @@ INSTALLED_APPS = (
     'django.contrib.gis',
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
+    'users',
     'librarian',
     'clientapp',
+    'django.contrib.admin',
 )
 
 MIDDLEWARE_CLASSES = (
@@ -103,6 +104,10 @@ USE_L10N = True
 
 USE_TZ = True
 
+AUTH_USER_MODEL = "users.User"
+
+LOGIN_REDIRECT_URL = "/lib/"
+
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
@@ -115,3 +120,4 @@ if os.name == 'nt':
     os.environ['GDAL_DATA'] = OSGEO4W + r"\share\gdal"
     os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
     os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
+

@@ -14,35 +14,35 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='Content',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('content_type', models.CharField(choices=[('IMG', 'תמונה'), ('SNG', 'שיר'), ('MAP', 'מפה'), ('TRV', 'יומן מסע'), ('VID', 'קטע וידאו'), ('OTR', 'אחר')], max_length=3, verbose_name='סוג התוכן')),
-                ('name', models.CharField(verbose_name='שם או כותרת', max_length=20)),
-                ('description', models.CharField(verbose_name='תיאור התוכן', max_length=200)),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
+                ('content_type', models.CharField(max_length=3, choices=[('IMG', 'תמונה'), ('SNG', 'שיר'), ('MAP', 'מפה'), ('TRV', 'יומן מסע'), ('VID', 'קטע וידאו'), ('OTR', 'אחר')], verbose_name='סוג התוכן')),
+                ('name', models.CharField(max_length=20, verbose_name='שם או כותרת')),
+                ('description', models.CharField(max_length=200, verbose_name='תיאור התוכן')),
                 ('link', models.URLField(verbose_name='קישור לתוכן')),
                 ('date', models.DateField(verbose_name='תאריך התוכן')),
             ],
             options={
-                'verbose_name': 'תוכן',
                 'verbose_name_plural': 'תכנים',
+                'verbose_name': 'content',
             },
         ),
         migrations.CreateModel(
             name='Site',
             fields=[
-                ('id', models.AutoField(serialize=False, auto_created=True, primary_key=True, verbose_name='ID')),
-                ('name', models.CharField(verbose_name='שם אתר', max_length=30)),
-                ('additional_text', models.CharField(verbose_name='טקסט נוסף', max_length=30)),
-                ('location', django.contrib.gis.db.models.fields.PointField(default=(3736198.0, 3922079.0), srid=4326)),
-                ('radius', models.PositiveSmallIntegerField(default=200, verbose_name='רדיוס')),
+                ('id', models.AutoField(verbose_name='ID', serialize=False, primary_key=True, auto_created=True)),
+                ('name', models.CharField(max_length=30, verbose_name='name')),
+                ('additional_text', models.CharField(max_length=30, verbose_name='additional text')),
+                ('location', django.contrib.gis.db.models.fields.PointField(srid=4326, verbose_name='location')),
+                ('radius', models.PositiveSmallIntegerField(default=200, verbose_name='radius')),
             ],
             options={
-                'verbose_name': 'אתר',
-                'verbose_name_plural': 'אתרים',
+                'verbose_name_plural': 'sites',
+                'verbose_name': 'site',
             },
         ),
         migrations.AddField(
             model_name='content',
             name='site',
-            field=models.ForeignKey(verbose_name='אתר מקושר', to='librarian.Site'),
+            field=models.ForeignKey(to='librarian.Site', verbose_name='אתר מקושר'),
         ),
     ]

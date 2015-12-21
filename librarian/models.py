@@ -6,7 +6,7 @@ from django.utils.translation import ugettext_lazy as _
 class Site(models.Model):
     name = models.CharField(_("name"), max_length=30, blank=False)
     additional_text = models.CharField(_('additional text'), max_length=30)
-    location = models.PointField(_('location'), default=Point(x=37.36198, y=39.22079))
+    location = models.PointField(_('location'))
     radius = models.PositiveSmallIntegerField(_('radius'), default=200)
 
     def __str__(self):

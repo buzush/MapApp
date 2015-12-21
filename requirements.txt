@@ -2,7 +2,9 @@ autoenv==1.0.0
 backports-abc==0.4
 decorator==4.0.4
 Django==1.8.6
+django-authtools==1.4.0
 django-bootstrap3==6.2.2
+django-extensions==1.5.9
 django-floppyforms==1.5.2
 django-geojson==2.8.1
 django-leaflet==0.17.1

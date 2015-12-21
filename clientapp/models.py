@@ -5,7 +5,7 @@ from librarian.models import Site
 
 
 class Client(models.Model):
-    location = models.PointField(_('location'), default=Point(x=37.36198, y=39.22079))
+    location = models.PointField(_('location'))
     radius = models.PositiveSmallIntegerField(_('radius'), default=200)
     site = Site()
 
