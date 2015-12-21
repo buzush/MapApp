@@ -1,9 +1,11 @@
 from authtools.views import LoginRequiredMixin
+from django import forms
 from django.contrib.gis.geos import Point
 from django.shortcuts import get_object_or_404
 from django.core.urlresolvers import reverse
 from django.views.generic import UpdateView, DetailView, ListView, DeleteView
 from django.views.generic.edit import CreateView
+from leaflet.forms.widgets import LeafletWidget
 
 from . import models
 
@@ -18,9 +20,15 @@ class SiteDetailView(LoginRequiredMixin, DetailView):
     model = models.Site
 
 
+class SiteForm(forms.ModelForm):
+    class Meta:
+        model = models.Site
+        fields = ['name', 'additional_text', 'location', 'radius']
+        widgets = {'location': LeafletWidget()}
+
 class SiteMixin(LoginRequiredMixin):
     model = models.Site
-    fields = ['name', 'additional_text', 'location', 'radius']
+    form_class=SiteForm
 
 
 class SiteCreateView(SiteMixin, CreateView):

@@ -1,20 +1,35 @@
 {% extends 'librarian/base.html' %}
-{% load i18n %}
+{% load i18n leaflet_tags %}
 {% block content %}
 
-    <div>
+{% leaflet_js %}
+{% leaflet_css %}
 
-        <p>{{site.id}}</p>
-        <p>{{site.name}}</p>
-        <p>{{site.description}}</p>
-        <p>{{site.location}}</p>
-        <p>{{site.radius}}</p>
 
-        <a class="btn btn-default" href="{{ site.get_edit_url }}">
-            <i class="glyphicon glyphicon-pencil"></i>
-            {% trans "Edit" %}
-        </a>
+<script>
+    function map_init_basic (map, options) {
+        var el = $("#site");
+        var latlng = [el.data('lat'), el.data('lng')];
+        L.marker(latlng).addTo(map);
+        map.setView(latlng);
+    }
+</script>
 
-    </div>
+<div>
+
+    <p id="site" data-lat="{{site.location.coords.1}}" data-lng="{{site.location.coords.0}}">{{site.id}}</p>
+    <p>{{site.name}}</p>
+    <p>{{site.description}}</p>
+    <p>
+        {% leaflet_map "rmap" callback="window.map_init_basic" %}
+    </p>
+    <p>{{site.radius}}</p>
+
+    <a class="btn btn-default" href="{{ site.get_edit_url }}">
+        <i class="glyphicon glyphicon-pencil"></i>
+        {% trans "Edit" %}
+    </a>
+
+</div>
 
 {% endblock %}

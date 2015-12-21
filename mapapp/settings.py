@@ -39,6 +39,7 @@ INSTALLED_APPS = (
     'django.contrib.gis',
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
+    'leaflet',
     'users',
     'librarian',
     'clientapp',
@@ -113,6 +114,33 @@ LOGIN_REDIRECT_URL = "/lib/"
 # https://docs.djangoproject.com/en/1.8/howto/static-files/
 
 STATIC_URL = '/static/'
+
+LEAFLET_CONFIG = {
+    'SPATIAL_EXTENT': (32, 29, 36, 33.5),
+    'DEFAULT_CENTER': (35.093303, 31.976406),
+    'DEFAULT_ZOOM': 8,
+
+    'TILES': [
+
+        ('OVI Satellite',
+         'http://maptile.maps.svc.ovi.com/maptiler/maptile/newest/satellite.day/{z}/{x}/{y}/256/png8',
+         'OVI maps'),
+
+        ('OpenStreet map',
+         'http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png',
+         'OpenStreet Map'),
+
+        ('MapQuest Open Aerial',
+         'http://otile1.mqcdn.com/tiles/1.0.0/sat/{z}/{x}/{y}.jpg',
+         'MapQuest Open Aerial'),
+
+        ('Israel Hiking Trails',
+         'http://osm.org.il/IsraelHiking/Tiles/{z}/{x}/{y}.png',
+         'Israel Hiking Trails'),
+    ],
+
+    'ATTRIBUTION_PREFIX': 'Noam Hagever',
+}
 
 if os.name == 'nt':
     OSGEO4W = r"C:\OSGeo4W"

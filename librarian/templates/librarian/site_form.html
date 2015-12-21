@@ -1,6 +1,10 @@
 {% extends "librarian/base.html" %}
-{% load i18n bootstrap3%}
+{% load i18n bootstrap3 leaflet_tags %}
+
 {% block content %}
+{% leaflet_js plugins="forms" %}
+{% leaflet_css plugins="forms" %}
+
 <form method="post">
     {% csrf_token %}
     {{form.media}}
