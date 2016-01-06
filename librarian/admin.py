@@ -1,6 +1,6 @@
 from django.contrib.gis import admin
 
-from librarian.views import DEFAULT_CENTER
+#from librarian.views import DEFAULT_CENTER
 from .models import Site, Content
 from leaflet.admin import LeafletGeoAdmin
 

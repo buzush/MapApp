@@ -86,6 +86,9 @@ footer {
   text-align: center;
 }
 
+#3 {
+    height: 5px;
+}
 .card {
     float: right !important;
     height: 300px;

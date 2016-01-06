@@ -11,11 +11,15 @@ from leaflet.forms.widgets import LeafletWidget
 from librarian.importer import get_primo_data
 from . import models
 
-DEFAULT_CENTER = Point(x=35.093303, y=31.976406)
-
 
 class SiteListView(LoginRequiredMixin, ListView):
     model = models.Site
+    def get_context_data(self, *args,**kwargs):
+        context = super(SiteListView,self).get_context_data(*args,**kwargs)
+        context['settings_dict']={}
+        context['settings_dict']['RESET_VIEW']= False
+        # context['settings_dict']['DEFAULT_ZOOM'] =False
+        return context
 
 
 class SiteDetailView(LoginRequiredMixin, DetailView):
@@ -35,7 +39,10 @@ class SiteMixin(LoginRequiredMixin):
 
 
 class SiteCreateView(SiteMixin, CreateView):
+
     def get_initial(self):
+
+        DEFAULT_CENTER = Point(x=35.093303, y=31.976406)
         d = super().get_initial()
         d['location'] = DEFAULT_CENTER
         return d

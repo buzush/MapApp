@@ -1,6 +1,22 @@
 {% extends 'librarian/base.html' %}
 
-{% block content %}
+            {% block content %}
+
+<script>
+    function map_init_basic (map, options) {
+        var el = $("#data-" + map._container.id);
+        console.log(map);
+        var latlng = [el.data('lat'), el.data('lng')];
+        L.marker(latlng).addTo(map);
+        map.setView(latlng);
+        map.dragging.disable();
+        map.boxZoom.disable();
+        map.touchZoom.disable();
+        map.doubleClickZoom.disable();
+        $('.leaflet-control-zoom').css('visibility','hidden');
+    }
+</script>
+
 
     <div class="container">
 

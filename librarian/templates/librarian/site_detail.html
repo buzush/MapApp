@@ -8,20 +8,24 @@
 
 <script>
     function map_init_basic (map, options) {
-        var el = $("#site");
+        console.log(map);
+        console.log(options);
+        var el = $("#"+map);
         var latlng = [el.data('lat'), el.data('lng')];
         L.marker(latlng).addTo(map);
-        map.setView(latlng);
+        map.setView(latlng,11);
+        map.draggable = false;
     }
 </script>
 
 <div>
 
-    <p id="site" data-lat="{{site.location.coords.1}}" data-lng="{{site.location.coords.0}}">{{site.id}}</p>
+    <p id="site-{{site.id}}" data-lat="{{site.location.coords.1}}" data-lng="{{site.location.coords.0}}">{{site.id}}</p>
     <p>{{site.name}}</p>
     <p>{{site.description}}</p>
     <p>
-        {% leaflet_map "rmap" callback="window.map_init_basic" %}
+
+        {% leaflet_map "site-{{site.id}}" callback="window.map_init_basic" %}
     </p>
     <p>{{site.radius}}</p>
 
