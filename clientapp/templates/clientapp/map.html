@@ -10,15 +10,53 @@
             href="http://cdn.leafletjs.com/leaflet-0.7/leaflet.css"
     />
     <script src="http://cdn.leafletjs.com/leaflet-0.7/leaflet.js"></script>
-    <script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- Bootstrap Core CSS -->
+    <link href="{% static 'librarian/css/bootstrap.min.css' %}"
+          rel="stylesheet">
+    <link rel="stylesheet"
+          href="{% static 'librarian/css/bootstrap-rtl.css' %}">
+
+
+
 </head>
 <body>
-<div id="map" data-url="{% url "sites" %}" style="width: 600px; height: 400px"></div>
 
-<button type="button">Share Media</button>
+<div id="map" data-url="{% url "sites" %}" style="position:absolute; top:0; left:0; right:0; bottom:0;"></div>
+
+<!-- Modal -->
+<div class="modal fade" id="siteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+      </div>
+      <div class="modal-body">
+        Blah Blah
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- jQuery -->
+<script src="{% static 'librarian/js/jquery.js' %}"></script>
+
+<!-- Bootstrap Core JavaScript -->
+<script src="{% static 'librarian/js/bootstrap.min.js' %}"></script>
+
 
 <script src="{% static "js/map.js" %}">
 
 </script>
+
+
 </body>
 </html>

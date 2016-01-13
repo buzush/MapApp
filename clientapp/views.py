@@ -5,6 +5,8 @@ from django.template import RequestContext, loader
 from django.contrib.gis.db import models
 from django.contrib.gis.geos import Point
 from django.utils.translation import ugettext_lazy as _
+from django.views.generic import DetailView
+
 from librarian import models
 
 
@@ -45,3 +47,10 @@ def sites(request):
     # ))
     # assert False, d
     return JsonResponse({'points': l})
+
+
+
+class SiteModalView(DetailView):
+    template_name = "clientapp/site_modal.html"
+    model = models.Site
+

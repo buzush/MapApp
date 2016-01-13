@@ -8,31 +8,58 @@
 
 <script>
     function map_init_basic (map, options) {
+        var el = $("#data-" + map._container.id);
         console.log(map);
-        console.log(options);
-        var el = $("#"+map);
         var latlng = [el.data('lat'), el.data('lng')];
         L.marker(latlng).addTo(map);
-        map.setView(latlng,11);
-        map.draggable = false;
+        map.setView(latlng);
+        map.dragging.disable();
+        map.boxZoom.disable();
+        map.touchZoom.disable();
+        map.doubleClickZoom.disable();
+        $('.leaflet-control-zoom').css('visibility','hidden');
+
     }
 </script>
 
-<div>
+<div id="main-container-{{site.id}}">
 
     <p id="site-{{site.id}}" data-lat="{{site.location.coords.1}}" data-lng="{{site.location.coords.0}}">{{site.id}}</p>
     <p>{{site.name}}</p>
     <p>{{site.description}}</p>
-    <p>
-
-        {% leaflet_map "site-{{site.id}}" callback="window.map_init_basic" %}
-    </p>
-    <p>{{site.radius}}</p>
+    <div class="sitemap_list" id="data-{{site.id}}" data-lat="{{site.location.coords.1}}"
+                 data-lng="{{site.location.coords.0}}">
+        {% leaflet_map site.id callback="window.map_init_basic" settings_overrides=settings_dict %}
+    </div>
+    <p>רדיוס: {{site.radius}}</p>
 
     <a class="btn btn-default" href="{{ site.get_edit_url }}">
         <i class="glyphicon glyphicon-pencil"></i>
-        {% trans "Edit" %}
+        {% trans "עריכת אתר" %}
     </a>
+
+    <ul class="list-group">
+        {% for content in site.contents.all %}
+
+        <li class="list-group-item">
+            {% for content_field in content.get_model_fields %}
+            <p>
+                <b> {{ content_field.0}} </b>: {{ content_field.1 }}
+            </p>
+
+            {% endfor %}
+
+
+       <a class="btn btn-default" href="{{ content.get_edit_url }}">
+            <i class="glyphicon glyphicon-pencil"></i>
+            {% trans "עריכת תוכן" %}
+        </a>
+
+
+        </li>
+
+        {% endfor %}
+    </ul>
 
 </div>
 

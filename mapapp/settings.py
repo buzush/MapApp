@@ -139,7 +139,7 @@ LEAFLET_CONFIG = {
          'Israel Hiking Trails'),
     ],
 
-    'ATTRIBUTION_PREFIX': 'Noam Hagever',
+    'ATTRIBUTION_PREFIX': 'סיפורי דרכים',
 }
 
 if os.name == 'nt':

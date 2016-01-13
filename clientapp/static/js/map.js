@@ -32,7 +32,11 @@ $(function () {
         .success(function(data) {
             console.log(data);
             $.each(data.points, function(i, point) {
-                var marker = L.marker([point.lng, point.lat]).addTo(map).bindPopup(point.name);
+                var marker = L.marker([point.lng, point.lat]).addTo(map).on("click",function(e){
+                    console.log(e);
+                    console.log(e.layer);
+                    $("#siteModal").modal();
+                });
             });
         })
         .error(function(x) {

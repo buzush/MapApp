@@ -18,12 +18,17 @@ class SiteListView(LoginRequiredMixin, ListView):
         context = super(SiteListView,self).get_context_data(*args,**kwargs)
         context['settings_dict']={}
         context['settings_dict']['RESET_VIEW']= False
-        # context['settings_dict']['DEFAULT_ZOOM'] =False
         return context
 
 
 class SiteDetailView(LoginRequiredMixin, DetailView):
     model = models.Site
+    def get_context_data(self, *args,**kwargs):
+        context = super(SiteDetailView,self).get_context_data(*args,**kwargs)
+        context['settings_dict']={}
+        context['settings_dict']['RESET_VIEW']= False
+        return context
+
 
 
 class SiteForm(forms.ModelForm):

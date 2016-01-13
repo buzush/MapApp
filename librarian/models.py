@@ -24,7 +24,7 @@ class Site(models.Model):
 
 
 class Content(models.Model):
-    site = models.ForeignKey(Site, verbose_name="אתר מקושר")
+    site = models.ForeignKey(Site, verbose_name="אתר מקושר", related_name="contents")
     CONTENT_TYPES = (
         ("IMG", "תמונה"),
         ("SNG", "שיר"),
@@ -38,6 +38,7 @@ class Content(models.Model):
     description = models.CharField("תיאור התוכן", max_length=200)
     link = models.URLField("קישור לתוכן")
     date = models.DateField("תאריך התוכן")
+
 
     def __str__(self):
         return "{}: {}".format(
@@ -57,3 +58,10 @@ class Content(models.Model):
     class Meta:
         verbose_name = _("content")
         verbose_name_plural = "תכנים"
+
+    def get_model_fields(self):
+        result = []
+        for field_instance in self._meta.get_fields():
+            result.append((field_instance.name, getattr(self, field_instance.name)))
+
+        return result
