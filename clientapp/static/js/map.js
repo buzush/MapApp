@@ -30,13 +30,12 @@ $(function () {
 
     $.get($("#map").data('url'))
         .success(function(data) {
-            console.log(data);
             $.each(data.points, function(i, point) {
                 var marker = L.marker([point.lng, point.lat]).addTo(map).on("click",function(e){
-                    console.log(e);
-                    console.log(e.layer);
-                    $("#siteModal").modal();
+                    $("#site-modal").modal();
+                    $("#site-info").html("loading...").load(point.modal_url);
                 });
+
             });
         })
         .error(function(x) {

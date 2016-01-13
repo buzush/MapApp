@@ -1,0 +1,15 @@
+<p>{{ site.name }}</p>
+<p>{{ site.description }}</p>
+
+<ul class="list-group">
+    {% for content in site.contents.all %}
+        <li class="list-item">
+            <h2 class="list-group-item-heading">
+                {{ content.name }}
+            </h2>
+            <div class="list-group-item-text">
+                {% include content.get_template_name %}
+            </div>
+        </li>
+    {% endfor %}
+</ul>

@@ -19,6 +19,8 @@
           rel="stylesheet">
     <link rel="stylesheet"
           href="{% static 'librarian/css/bootstrap-rtl.css' %}">
+    <link rel="stylesheet"
+          href="{% static 'css/map.css' %}">
 
 
 
@@ -28,15 +30,14 @@
 <div id="map" data-url="{% url "sites" %}" style="position:absolute; top:0; left:0; right:0; bottom:0;"></div>
 
 <!-- Modal -->
-<div class="modal fade" id="siteModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
-  <div class="modal-dialog" role="document">
+<div class="modal fade" id="site-modal" tabindex="-1" role="dialog">
+  <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
         <h4 class="modal-title" id="myModalLabel">Modal title</h4>
       </div>
-      <div class="modal-body">
-        Blah Blah
+      <div class="modal-body" id="site-info">
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>

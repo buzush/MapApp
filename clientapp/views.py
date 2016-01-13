@@ -40,17 +40,11 @@ def sites(request):
              'name': site.name,
              'lat': site.location.x,
              'lng': site.location.y,
+             'modal_url': site.get_modal_url(),
          } for site in qs]
-    # print(qs.count())
-    # d = serialize('geojson', qs, geometry_field='x', fields=(
-    #     'name',
-    # ))
-    # assert False, d
     return JsonResponse({'points': l})
 
 
-
 class SiteModalView(DetailView):
-    template_name = "clientapp/site_modal.html"
     model = models.Site
-
+    template_name = "clientapp/site_modal.html"
