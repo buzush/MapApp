@@ -33,6 +33,11 @@ class Content(models.Model):
 
     class Type:
         IMG = "IMG"
+        SNG = "SNG"
+        MAP = "MAP"
+        TRV = "TRV"
+        OTR = "OTR"
+
         choices = (
             (IMG, "תמונה"),
             ("SNG", "שיר"),

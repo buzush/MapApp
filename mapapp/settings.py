@@ -43,6 +43,7 @@ INSTALLED_APPS = (
     'users',
     'librarian',
     'clientapp',
+    'home',
     'django.contrib.admin',
 )
 

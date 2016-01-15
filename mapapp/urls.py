@@ -16,10 +16,12 @@ Including another URLconf
 from django.conf.urls import include, url
 from django.contrib import admin
 import users.views
+import home.views
 
 urlpatterns = [
+    url(r'^$', 'home.views.index'),
     url(r'^admin/', include(admin.site.urls)),
-    url(r'^lib/',include('librarian.urls')),
+    url(r'^lib/', include('librarian.urls')),
     url(r'^clientapp/', include('clientapp.urls')),
     url(r'^accounts/login/', users.views.CustomLoginView.as_view()),
     url(r'^accounts/', include('authtools.urls')),
