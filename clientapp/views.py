@@ -10,20 +10,6 @@ from django.views.generic import DetailView
 from librarian import models
 
 
-def site(request, site_id):
-    return HttpResponse("hello world %s" % site_id)
-
-
-def client(request):
-    return HttpResponse("client!")
-
-
-def index(request):
-    template = loader.get_template('clientapp/index.html')
-    context = RequestContext(request)
-    return HttpResponse(template.render(context))
-
-
 def mapi(request):
     template = loader.get_template('clientapp/map.html')
     context = RequestContext(request)

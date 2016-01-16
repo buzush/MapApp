@@ -447,6 +447,7 @@ fieldset[disabled] .btn-primary.active {
     text-transform: uppercase;
     font-family: 'Open Sans','Helvetica Neue',Arial,sans-serif;
     font-weight: 700;
+    color:#fff;
     background-color: #446BA4;
 }
 
