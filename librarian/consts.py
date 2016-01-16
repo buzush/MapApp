@@ -2,6 +2,7 @@ class MediaType:
     AUDIO = "audio"
     IMAGE = "image"
     ARCHIVE = "archive"
+    PHOTO = "photograph"
 
     MAP = "MAP"
     TRV = "TRV"
@@ -12,6 +13,7 @@ class MediaType:
         (AUDIO, "שיר"),
         (IMAGE, "תמונה"),
         (ARCHIVE, "פריט ארכיון"),
+        (PHOTO, "צילום"),
         (MAP, "מפה"),
         (TRV, "יומן מסע"),
         (VID, "קטע וידאו"),
