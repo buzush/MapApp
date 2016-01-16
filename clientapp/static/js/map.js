@@ -34,6 +34,7 @@ $(function () {
                 var marker = L.marker([point.lng, point.lat]).addTo(map).on("click",function(e){
                     $("#site-modal").modal();
                     $("#site-info").html("loading...").load(point.modal_url);
+                    $(".modal-title").html("אודי - איך מביאים לכאן את שם האתר?");
                 });
 
             });
