@@ -1,16 +1,20 @@
 {% extends "librarian/base.html" %}
 {% load i18n bootstrap3%}
 {% block content %}
-content_form.html
+
 <form method="post">
     {% csrf_token %}
     {{form.media}}
        <div class="row">
             <div class="col-md-12">
                 {% bootstrap_form_errors form "non_fields" %}
-                <p class="site_name">שם האתר:{</p>
-                {% bootstrap_field form.content_type %}
+                <p class="site_name"><b>שם האתר:</b> {{ content.site }} </p>
                 {% bootstrap_field form.name %}
+                {% bootstrap_field form.content_collection %}
+                {% bootstrap_field form.content_type %}
+                {% bootstrap_field form.creator %}
+                {% bootstrap_field form.creator_2 %}
+                {% bootstrap_field form.performing %}
                 {% bootstrap_field form.description %}
                 {% bootstrap_field form.link %}
                 {% bootstrap_field form.date %}

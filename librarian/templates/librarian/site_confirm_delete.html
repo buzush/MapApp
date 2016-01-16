@@ -1,4 +1,10 @@
+{% extends 'librarian/base.html' %}
+{% load i18n %}
+{% block content %}
+
 <form action="" method="post">{% csrf_token %}
-    <p>Are you sure you want to delete "{{ object }}"?</p>
-    <input type="submit" value="Confirm" />
+    <p>האם את/ה בטוח/ה שברצונך למחוק את האתר "{{ object }}"?</p>
+    <input type="submit" value="כן, למחוק" />
 </form>
+
+{% endblock %}

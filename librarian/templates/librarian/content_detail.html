@@ -1,22 +1,30 @@
 {% extends 'librarian/base.html' %}
 {% load i18n %}
 {% block content %}
-content_detail.html
     <div>
 
         <h1>{{content.name}}</h1>
-        <p>{{content.id}}</p>
-        <p>{{content.type}}</p>
-        <p>{{content.site}}</p>
-        <p>{{content.content_type}}</p>
-        <p>{{content.description}}</p>
-        <p>{{content.link}}</p>
-        <p>{{content.date}}</p>
 
         <a class="btn btn-default" href="{{ content.get_edit_url }}">
             <i class="glyphicon glyphicon-pencil"></i>
             {% trans "Edit" %}
         </a>
+
+        <a class="btn btn-default" href="{{ content.get_delete_url }}">
+            <i class="glyphicon glyphicon-trash"></i>
+            {% trans "Delete" %}
+        </a>
+        <br><br>
+        <p> <b>מקושר לאתר: </b> <a href="{{ content.site.get_absolute_url }}"> {{ content.site.name }} </a></p>
+        <p><b>אוסף: </b>{{content.content_collection}}</p>
+        <p><b>סוג התוכן: </b>{{content.content_type}}</p>
+        <p><b>אתר או נקודה במפה: </b>{{content.site}}</p>
+        <p><b>יוצר/ת: </b>{{content.creator}}</p>
+        <p><b>יוצר/ת נוספים: </b>{{content.creator_2}}</p>
+        <p><b>מבצע/ת: </b>{{content.performing}}</p>
+        <p><b>תיאור: </b> {{content.description}}</p>
+        <p><b>קישור לפריט להצגה: </b><a href="{{content.link}}">{{content.link}}</a></p>
+        <p><b>תאריך פריט התוכן: </b>{{content.date}}</p>
 
     </div>
 

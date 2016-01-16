@@ -41,3 +41,9 @@ msgstr "תוכן"
 
 msgid "Map Story"
 msgstr "סיפורי דרך"
+
+msgid "Edit"
+msgstr "עריכה"
+
+msgid "Go Fetch!"
+msgstr "יבוא המידע"

@@ -25,41 +25,84 @@
 <div id="main-container-{{site.id}}">
 
     <p id="site-{{site.id}}" data-lat="{{site.location.coords.1}}" data-lng="{{site.location.coords.0}}">{{site.id}}</p>
-    <p>{{site.name}}</p>
-    <p>{{site.description}}</p>
-    <div class="sitemap_list" id="data-{{site.id}}" data-lat="{{site.location.coords.1}}"
-                 data-lng="{{site.location.coords.0}}">
+    <h1>{{site.name}}</h1>
+
+    <br><br>
+    <p><b>רדיוס: </b> {{site.radius}}</p>
+    <p><b>מידע על האתר, הנקודה או האזור: </b>{{site.additional_text}}</p>
+
+    <div class="container">
+        <div class="row">
+            <div class="sitemap_list col-md-10 col-sm-10" id="data-{{site.id}}" data-lat="{{site.location.coords.1}}"
+                data-lng="{{site.location.coords.0}}">
         {% leaflet_map site.id callback="window.map_init_basic" settings_overrides=settings_dict %}
+            </div>
+            <div class="col-md-2 col-sm-2">
+                <br><br>
+                <a class="btn btn-default" href="{{ site.get_edit_url }}">
+                <i class="glyphicon glyphicon-pencil"></i>
+                    {% trans "עריכת תיאור ומיקום אתר" %}
+                </a>
+                <br><br>
+                <a class="btn btn-default" href="{{ site.get_delete_url }}">
+                <i class="glyphicon glyphicon-trash"></i>
+                    {% trans "מחיקת פרטי ההאתר" %}
+                </a>
+                <hr>
+                <br>
+                <a href="#" class="btn btn-default openall"><i class="fa fa-expand"></i> הרחבת תצוגת התכנים</a>
+                <br><br>
+                <a href="#" class="btn btn-default closeall"><i class="fa fa-compress"></i> צמצום תצוגת תכנים</a>
+                <br><br>
+
+            </div>
+        </div>
     </div>
-    <p>רדיוס: {{site.radius}}</p>
 
-    <a class="btn btn-default" href="{{ site.get_edit_url }}">
-        <i class="glyphicon glyphicon-pencil"></i>
-        {% trans "עריכת אתר" %}
-    </a>
+    <br><br>
 
-    <ul class="list-group">
+	<hr>
+
+    <div class="panel-group" id="accordion">
         {% for content in site.contents.all %}
+      <div class="panel panel-default">
+          <div class="panel-heading">
+            <h4 class="panel-title">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                    <i class="fa fa-expand"></i> {{ content.name }}
+                </a>
+                <span class="pull-right">
 
-        <li class="list-group-item">
-            {% for content_field in content.get_model_fields %}
-            <p>
-                <b> {{ content_field.0}} </b>: {{ content_field.1 }}
-            </p>
+                    <a class="btn btn-default" href="{{ content.get_edit_url }}">
+                    <i class="glyphicon glyphicon-pencil"></i>
+                    {% trans "עריכת תוכן" %}
+                    </a>
 
-            {% endfor %}
+                    <a class="btn btn-default" href="{{ content.get_delete_url }}">
+                    <i class="glyphicon glyphicon-trash"></i>
+                        {% trans "Delete" %}
+                    </a>
+                </span>
+                <br><br>
+            </h4>
+          </div>
 
-
-       <a class="btn btn-default" href="{{ content.get_edit_url }}">
-            <i class="glyphicon glyphicon-pencil"></i>
-            {% trans "עריכת תוכן" %}
-        </a>
-
-
-        </li>
+          <div id="collapseOne" class="panel-collapse collapse">
+            <div class="panel-body">
+                    <p><b>אוסף: </b>{{content.content_collection}}</p>
+                    <p><b>סוג התוכן: </b>{{content.content_type}}</p>
+                    <p><b>אתר או נקודה במפה: </b>{{content.site}}</p>
+                    <p><b>יוצר/ת: </b>{{content.creator}}</p>
+                    <p><b>יוצר/ת נוספים: </b>{{content.creator_2}}</p>
+                    <p><b>מבצע/ת: </b>{{content.performing}}</p>
+                    <p><b>תיאור: </b> {{content.description}}</p>
+                    <p><b>קישור לפריט להצגה: </b><a href="{{content.link}}">{{content.link}}</a></p>
+                    <p><b>תאריך פריט התוכן: </b>{{content.date}}</p>            </div>
+            </div>
+        </div>
 
         {% endfor %}
-    </ul>
+    </div>
 
 </div>
 

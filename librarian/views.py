@@ -65,8 +65,12 @@ class SiteUpdateView(SiteMixin, UpdateView):
 class ContentMixin(LoginRequiredMixin):
     model = models.Content
     fields = [
+        'content_collection',
         'content_type',
         'name',
+        'creator',
+        'creator_2',
+        'performing',
         'description',
         'link',
         'date',

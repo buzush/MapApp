@@ -5,30 +5,36 @@
 
 <div class="card text-center col-md-4 noselect clickable" id="main-container-{{site.id}}" z-default=5 z-hover=8>
     <div class="row">
-        <h3 class="bg-success"><a href="{{site.get_absolute_url}}">{{site.name}}</a></h3>
-
+        <h3 class="bg-success"><a href="{{site.get_absolute_url}}">{{site.name}}</a>
+        <span class="text-left">
+            <a class="btn btn-default pull-right" href="{% url 'delete_site' site.id %}"><i class="fa fa-trash"></i></a>
+        </span>
+        </h3>
     </div>
 
     <div class="row">
         <div>
-            <p class="card-text">{{site.additional_text}}</p>
-            <p class="card-text"></p>
-            <div class="sitemap_list" id="data-{{site.id}}" data-lat="{{site.location.coords.1}}"
-                 data-lng="{{site.location.coords.0}}">
-                {% with site_id=site.id %}
-                {% leaflet_map site_id callback="window.map_init_basic" settings_overrides=settings_dict %}
-                {% endwith %}
-            </div>
-        </div>
-
-        <p class="card-text">{{site.radius}}</p>
+            <p class="card-text">
+                {{site.additional_text}}
+            </p>
+            <p class="card-text"><b>רדיוס: </b>{{site.radius}}</p>
     </div>
+        <div clas="row">
 
-    <div clas="row">
+            <a class="btn btn-default" href="{% url 'create_content_from_url' site.id %}">הוספת תוכן</a>
+            <br><br>
 
-        <a class="btn btn-default" href="{% url 'create_content_from_url' site.id %}">הוספת תוכן</a>
+            <a class="btn btn-default" href="{% url 'view_site' site.id %}">תכנים מקושרים</a>
 
-        <a class="btn btn-default" href="{% url 'delete_site' site.id %}">מחיקת אתר</a>
+        </div>
+        <p class="card-text"></p>
+        <div class="sitemap_list" id="data-{{site.id}}" data-lat="{{site.location.coords.1}}"
+        data-lng="{{site.location.coords.0}}">
+            {% with site_id=site.id %}
+            {% leaflet_map site_id callback="window.map_init_basic" settings_overrides=settings_dict %}
+            {% endwith %}
+
+        </div>
 
     </div>
 </div>

@@ -22,6 +22,10 @@ class Site(models.Model):
     def get_edit_url(self):
         return reverse("update_site", args=(self.pk,))
 
+    def get_delete_url(self):
+        return reverse("delete_site", args=(self.pk,))
+
+
     class Meta:
         verbose_name = _('site')
         verbose_name_plural = _('sites')
@@ -36,23 +40,42 @@ class Content(models.Model):
         SNG = "SNG"
         MAP = "MAP"
         TRV = "TRV"
+        VID = "VID"
         OTR = "OTR"
 
         choices = (
             (IMG, "תמונה"),
-            ("SNG", "שיר"),
-            ("MAP", "מפה"),
-            ("TRV", "יומן מסע"),
-            ("VID", "קטע וידאו"),
-            ("OTR", "אחר"),
+            (SNG, "שיר"),
+            (MAP, "מפה"),
+            (TRV, "יומן מסע"),
+            (VID, "קטע וידאו"),
+            (OTR, "אחר"),
         )
 
+    class Collection:
+        choices = (
+            ("BaiTmuna", "ביתמונה"),
+            ("WahrmanAlbum", "אוסף עקב ורמן"),
+            ("Aleksandrowicz", "מאגר תצלומי זאב אלכסנדרוביץ"),
+            ("Tsalmania", "הצלמניה"),
+            ("Schwadron", "אוסף הפורטרים של אברהם שבדרון"),
+            ("Lenkin", "מאגר לנקין"),
+            ("Ephemera", "מסע בזמן"),
+            ("Music", "ארכיון המוסיקה"),
+            ("Maps", "אוסף המפות")
+
+        )
+
+    content_collection = models.CharField("אוסף", choices = Collection.choices, max_length=10) #Should be selected automaticaly or at the initial form?
     content_type = models.CharField("סוג התוכן", max_length=3,
                                     choices=Type.choices)
     name = models.CharField("שם או כותרת", max_length=20)
-    description = models.CharField("תיאור התוכן", max_length=200)
+    creator = models.CharField("יוצר/ת", max_length=14, blank = True, null=True)
+    creator_2 = models.CharField("יוצר/ת נוספ/ת",max_length=14, blank = True, null=True)
+    performing = models.CharField("מבצע/ת",max_length=14, blank = True, null=True)
+    description = models.CharField("תיאור התוכן", max_length=200, blank = True, null=True)
     link = models.URLField("קישור לתוכן")
-    date = models.DateField("תאריך התוכן")
+    date = models.DateField("תאריך התוכן", blank = True, null=True)
 
     def __str__(self):
         return "{}: {}".format(
@@ -68,6 +91,9 @@ class Content(models.Model):
 
     def get_edit_url(self):
         return reverse("update_content", args=(self.site.id, self.pk))
+
+    def get_delete_url(self):
+        return reverse("delete_content", args=(self.site.id, self.pk))
 
     class Meta:
         verbose_name = _("content")
