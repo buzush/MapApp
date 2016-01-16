@@ -40,6 +40,7 @@ INSTALLED_APPS = (
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
     'leaflet',
+    'django_social_share',
     'users',
     'librarian',
     'clientapp',

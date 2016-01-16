@@ -1,4 +1,11 @@
-<h1>{{ site.name }}</h1>
+{% load social_share %}
+{% load staticfiles %}
+<div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">{{ site.name }}</h4>
+                </div>
+                <div class="modal-body">
+
 <p>{{ site.additional_text }}</p>
 
 <ul class="list-group">
@@ -16,3 +23,18 @@
         </li>
     {% endfor %}
 </ul>
+
+
+                </div>
+                <div class="modal-footer">
+                    <div class="row">
+
+                        <div class=".col-xs-3 .col-md-3">
+                            <a type="button" class="btn btn-primary" target="_blank" href="mailto:?subject='תוכן מעניין מהספריה הלאומית'"><i class="fa fa-envelope"></i> דוא"ל </a>
+                                {% post_to_facebook object_or_url "פייסבוק" %}
+                                {% post_to_twitter 'עברתי ב:{{site.name}} והספריה הלאומיות שלחה לי את זה: {{ site.get_absolute_url }}' site.get_absolute.url "טוויטר"%}
+                            <!--<a type="button" class="btn btn-primary" target="_blank" href="<a href='whatsapp://send?text=תראו מה הספריה הלאומית שלחה לי על [אתר]'>Hello, world!</a>"><i class="fa fa-whatsapp"></i> וואטאפ </a>-->
+                        </div>
+
+                    </div>
+                </div>

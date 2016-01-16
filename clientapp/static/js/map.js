@@ -35,6 +35,7 @@ $(function () {
                     $("#site-modal").modal();
                     $("#site-info").html("loading...").load(point.modal_url);
                     $(".modal-title").html("אודי - איך מביאים לכאן את שם האתר?");
+
                 });
 
             });
