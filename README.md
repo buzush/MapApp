@@ -12,4 +12,6 @@ Project Installation
 1. Clone the repo.
 2. Switch / create virtualenv.
 3. pip install -r requirements.txt
-4. run from mapapp/: python manage.py runserver
+4. python manage.py migrate
+4. python manage.py loaddata librarian/fixtures/collections.json
+5. python manage.py runserver

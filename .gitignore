@@ -1,4 +1,5 @@
-# Created by .ignore support plugin (hsz.mobi)
+/mapapp/local_settings.py
+
 ### Windows template
 # Windows image file caches
 Thumbs.db
@@ -18,6 +19,7 @@ $RECYCLE.BIN/
 
 # Windows shortcuts
 *.lnk
+
 ### Python template
 # Byte-compiled / optimized / DLL files
 __pycache__/
