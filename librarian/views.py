@@ -8,27 +8,29 @@ from django.views.generic import UpdateView, DetailView, ListView, DeleteView, \
 from django.views.generic.edit import CreateView
 from leaflet.forms.widgets import LeafletWidget
 
-from librarian.importer import get_primo_data
+from librarian import primo
+from librarian import nli
 from . import models
 
 
 class SiteListView(LoginRequiredMixin, ListView):
     model = models.Site
-    def get_context_data(self, *args,**kwargs):
-        context = super(SiteListView,self).get_context_data(*args,**kwargs)
-        context['settings_dict']={}
-        context['settings_dict']['RESET_VIEW']= False
+
+    def get_context_data(self, *args, **kwargs):
+        context = super(SiteListView, self).get_context_data(*args, **kwargs)
+        context['settings_dict'] = {}
+        context['settings_dict']['RESET_VIEW'] = False
         return context
 
 
 class SiteDetailView(LoginRequiredMixin, DetailView):
     model = models.Site
-    def get_context_data(self, *args,**kwargs):
-        context = super(SiteDetailView,self).get_context_data(*args,**kwargs)
-        context['settings_dict']={}
-        context['settings_dict']['RESET_VIEW']= False
-        return context
 
+    def get_context_data(self, *args, **kwargs):
+        context = super(SiteDetailView, self).get_context_data(*args, **kwargs)
+        context['settings_dict'] = {}
+        context['settings_dict']['RESET_VIEW'] = False
+        return context
 
 
 class SiteForm(forms.ModelForm):
@@ -44,9 +46,7 @@ class SiteMixin(LoginRequiredMixin):
 
 
 class SiteCreateView(SiteMixin, CreateView):
-
     def get_initial(self):
-
         DEFAULT_CENTER = Point(x=35.093303, y=31.976406)
         d = super().get_initial()
         d['location'] = DEFAULT_CENTER
@@ -65,7 +65,7 @@ class SiteUpdateView(SiteMixin, UpdateView):
 class ContentMixin(LoginRequiredMixin):
     model = models.Content
     fields = [
-        'content_collection',
+        'collection',
         'content_type',
         'name',
         'creator',
@@ -100,19 +100,20 @@ class ContentCreateFromURLView(ContentMixin, FormView):
 
 class ContentCreateView(ContentMixin, CreateView):
     def form_valid(self, form):
-        # THIS RUNS BEFORE SAVE
         form.instance.site = self.site
         return super().form_valid(form)
 
     def get_initial(self):
         d = super().get_initial()
         if 'url' in self.request.GET:
-            # TODO: doc_id = extract_doc_id(self.request.GET['url'])
-            doc_id = "NNL_ALEPH003440887"
-            data = get_primo_data(doc_id)
-            d['name'] = data['name']
-            # or: d.update(data)
+            doc_id = primo.extract_doc_id(self.request.GET['url'])
+            record = primo.primo_request(doc_id)
+            data = nli.parse_record(record)
+            d.update(data)
         return d
+
+    def get_success_url(self):
+        return self.site.get_absolute_url()
 
 
 class ContentUpdateView(ContentMixin, UpdateView):
