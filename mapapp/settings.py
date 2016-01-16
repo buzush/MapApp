@@ -37,6 +37,8 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'django.contrib.gis',
+    'django_extensions',
+    'authtools',
     'bootstrap3',
     'floppyforms',   # for floppy forms widgets, mmake sure to run manage.py collectstatic once you deploy your project.
     'leaflet',
@@ -151,3 +153,7 @@ if os.name == 'nt':
     os.environ['PROJ_LIB'] = OSGEO4W + r"\share\proj"
     os.environ['PATH'] = OSGEO4W + r"\bin;" + os.environ['PATH']
 
+try:
+    from .local_settings import *
+except ImportError:
+    pass

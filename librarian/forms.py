@@ -1,5 +1,4 @@
 import floppyforms.__future__ as forms
-# from django import forms
 
 from . import models
 
@@ -9,6 +8,7 @@ class SiteForm(forms.ModelForm):
         model = models.Site
         exclude = (
         )
+
 
 class ContentForm(forms.ModelForm):
     class Meta:
