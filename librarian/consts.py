@@ -4,11 +4,10 @@ class MediaType:
     ARCHIVE = "archive"
     PHOTO = "photograph"
     MAP = "map"
+    TRAVEL = "travel"
+    VIDEO  = "video"
     SHEET = "sheet"
     OTHER = "other"
-
-    TRV = "TRV"
-    VID = "VID"
 
     choices = (
         (AUDIO, "שיר"),
@@ -16,8 +15,8 @@ class MediaType:
         (ARCHIVE, "פריט ארכיון"),
         (PHOTO, "צילום"),
         (MAP, "מפה"),
-        (TRV, "יומן מסע"),
-        (VID, "קטע וידאו"),
+        (TRAVEL, "יומן מסע"),
+        (VIDEO, "קטע וידאו"),
         (SHEET, "גליון"),
         (OTHER, "אחר"),
     )
