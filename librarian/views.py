@@ -1,15 +1,16 @@
+import json
+
 from authtools.views import LoginRequiredMixin
-from django import forms
 from django.contrib.gis.geos import Point
-from django.shortcuts import get_object_or_404
 from django.core.urlresolvers import reverse
+from django.shortcuts import get_object_or_404, redirect
 from django.views.generic import UpdateView, DetailView, ListView, DeleteView, \
     FormView
 from django.views.generic.edit import CreateView
-from leaflet.forms.widgets import LeafletWidget
 
-from librarian import primo
 from librarian import nli
+from librarian import primo
+from . import forms
 from . import models
 
 
@@ -33,16 +34,9 @@ class SiteDetailView(LoginRequiredMixin, DetailView):
         return context
 
 
-class SiteForm(forms.ModelForm):
-    class Meta:
-        model = models.Site
-        fields = ['name', 'additional_text', 'location', 'radius']
-        widgets = {'location': LeafletWidget()}
-
-
 class SiteMixin(LoginRequiredMixin):
     model = models.Site
-    form_class = SiteForm
+    form_class = forms.SiteForm
 
 
 class SiteCreateView(SiteMixin, CreateView):
@@ -89,27 +83,34 @@ class ContentDetailView(LoginRequiredMixin, DetailView):
     model = models.Content
 
 
-class FromUrlForm(forms.Form):
-    url = forms.URLField()  # TODO: validate is primo URL using validators=[PrimoURLValidator()]
-
-
 class ContentCreateFromURLView(ContentMixin, FormView):
     template_name = "librarian/content_from_url.html"
-    form_class = FromUrlForm
+    form_class = forms.FromUrlForm
+
+    def form_valid(self, form):
+        return redirect("create_content", self.site.id,
+                        form.cleaned_data['doc_id'])
 
 
 class ContentCreateView(ContentMixin, CreateView):
     def form_valid(self, form):
         form.instance.site = self.site
+        form.instance.doc_id = form.initial['doc_id']
+        form.instance.full_record = json.dumps(self.record, indent=2)
         return super().form_valid(form)
 
     def get_initial(self):
         d = super().get_initial()
-        if 'url' in self.request.GET:
-            doc_id = primo.extract_doc_id(self.request.GET['url'])
-            record = primo.primo_request(doc_id)
-            data = nli.parse_record(record)
-            d.update(data)
+        doc_id = self.kwargs['doc_id']
+        self.record = primo.primo_request(doc_id)
+        data = nli.parse_record(self.record)
+        collection, created = models.Collection.objects.get_or_create(
+                code=data['collection_code'],
+                defaults={
+                    'title': data['collection_title'],
+                })
+        data['collection'] = collection.id
+        d.update(data)
         return d
 
     def get_success_url(self):

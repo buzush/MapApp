@@ -7,8 +7,8 @@ msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2015-11-25 17:32+0200\n"
-"PO-Revision-Date: 2015-11-25 17:32+0200\n"
+"POT-Creation-Date: 2016-01-17 15:28+0200\n"
+"PO-Revision-Date: 2016-01-17 15:28+0200\n"
 "Last-Translator: Noam\n"
 "Language-Team: \n"
 "Language: he\n"
@@ -16,7 +16,13 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.5.4\n"
+"X-Generator: Poedit 1.8.6\n"
+
+msgid "Primo doc id not found in url"
+msgstr "לא נמצא מזהה פרימו בקישור שסופק"
+
+msgid "Resource URL"
+msgstr "כתובת המקור (url)"
 
 msgid "name"
 msgstr "שם"
@@ -36,14 +42,47 @@ msgstr "אתר"
 msgid "sites"
 msgstr "אתרים"
 
+msgid "collection"
+msgstr "אוסף"
+
+msgid "collections"
+msgstr "אוספים"
+
 msgid "content"
 msgstr "תוכן"
 
-msgid "Map Story"
-msgstr "סיפורי דרך"
+msgid "Log out"
+msgstr "יציאה"
+
+msgid "Log in"
+msgstr "כניסה"
 
 msgid "Edit"
 msgstr "עריכה"
 
+msgid "Delete"
+msgstr "מחיקה"
+
+msgid "Edit Content"
+msgstr "עריכת תוכן"
+
+msgid "Add Content"
+msgstr "הוספת תוכן"
+
+msgid "Save"
+msgstr "שמירה"
+
 msgid "Go Fetch!"
-msgstr "יבוא המידע"
+msgstr "המשך"
+
+msgid "עריכת תיאור ומיקום אתר"
+msgstr ""
+
+msgid "מחיקת פרטי ההאתר"
+msgstr ""
+
+msgid "עריכת תוכן"
+msgstr ""
+
+#~ msgid "Map Story"
+#~ msgstr "סיפורי דרך"
