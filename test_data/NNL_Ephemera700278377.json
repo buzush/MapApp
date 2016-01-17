@@ -1,0 +1,122 @@
+{
+  "ranking": {
+    "booster2": "1",
+    "booster1": "1"
+  },
+  "facets": {
+    "frbrgroupid": "195262355",
+    "lfc13": "This item can be accessed by the general public from within and outside the library",
+    "toplevel": "NoRestrictions",
+    "language": [
+      "heb",
+      "ara"
+    ],
+    "rsrctype": "sheets",
+    "lfc22": [
+      "\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea",
+      "Ephemera Collection - The National Library of Israel"
+    ],
+    "lfc14": "\u05d4\u05e6\u05d2\u05d4",
+    "creatorcontrib": "\u05d0\u05d9\u05df \u05e4\u05e8\u05d8\u05d9 \u05d9\u05d5\u05e6\u05e8",
+    "lfc08": "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df \u05d4\u05de\u05e8\u05d0\u05d5\u05ea, \u05de\u05d2'\u05d0\u05e8",
+    "lfc15": "\u05db\u05d5\u05dc\u05dc \u05d0\u05d9\u05d5\u05e8",
+    "frbrtype": "6",
+    "collection": "Ephemera Collection - The National Library of Israel",
+    "prefilter": "sheets",
+    "lfc10": "\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea"
+  },
+  "sort": {
+    "title": "\u05e1\u05d9\u05e4\u05d5\u05e8\u05d5 \u05e9\u05dc \u05e1\u05d5\u05e1."
+  },
+  "display": {
+    "language": "heb;ara",
+    "lds07": "Ephemera Collection - The National Library of Israel",
+    "lds12": "\u0642\u0635\u0629 \u062d\u0635\u0627\u0646",
+    "format": "\u05db\u05d5\u05dc\u05dc \u05d0\u05d9\u05d5\u05e8.",
+    "lds06": "\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea",
+    "rights": "\u05d4\u05e6\u05e4\u05d9\u05d9\u05d4 \u05d1\u05e4\u05e8\u05d9\u05d8 \u05d6\u05d4 \u05d7\u05d5\u05e4\u05e9\u05d9\u05ea \u05dc\u05db\u05dc\u05dc \u05d4\u05de\u05e9\u05ea\u05de\u05e9\u05d9\u05dd, \u05d1\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d5\u05de\u05d7\u05d5\u05e6\u05d4 \u05dc\u05d4",
+    "lds13": "_0166.tif",
+    "lds42": "http://rosetta.nli.org.il/delivery/DeliveryManagerServlet?dps_func=stream&dps_pid=FL11667592",
+    "lds14": "\u05ea\u05d9\u05d0\u05d5\u05e8 \u05d4\u05e4\u05e8\u05d9\u05d8 \u05d4\u05d9\u05e0\u05d5 \u05ea\u05d9\u05d0\u05d5\u05e8 \u05de\u05e7\u05d5\u05e6\u05e8 \u05e9\u05e0\u05e2\u05e9\u05d4 \u05e2\u05dc \u05d9\u05d3\u05d9 \u05de\u05ea\u05e0\u05d3\u05d1\u05d9\u05dd, \u05d1\u05de\u05e7\u05e8\u05d4 \u05d5\u05de\u05e6\u05d0\u05ea\u05dd \u05d8\u05e2\u05d5\u05ea \u05e0\u05d9\u05ea\u05df \u05dc\u05d3\u05d5\u05d5\u05d7 \u05e2\u05dc\u05d9\u05d4 \u05d1\u05de\u05d9\u05d9\u05dc \u05d3\u05e8\u05da \"\u05e6\u05d5\u05e8 \u05e7\u05e9\u05e8\", \u05e0\u05d0 \u05dc\u05e6\u05d9\u05d9\u05df \u05d0\u05ea \u05e9\u05dd \u05d4\u05e4\u05e8\u05d9\u05d8",
+    "subject": "\u05d4\u05e6\u05d2\u05d4; \u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df",
+    "lds11": "\u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d1\u05e4\u05e8\u05d9\u05d8 \u05d6\u05d4 \u05e2\u05e9\u05d5\u05d9 \u05dc\u05d4\u05d9\u05d5\u05ea \u05db\u05e4\u05d5\u05e3 \u05dc\u05de\u05d2\u05d1\u05dc\u05d5\u05ea \u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d9\u05d5\u05e6\u05e8\u05d9\u05dd \u05e2\u05dc \u05e4\u05d9 \u05d3\u05d9\u05df \u05d5/\u05d0\u05d5 \u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9 \u05e0\u05d5\u05e1\u05e4\u05d9\u05dd \u05e9\u05e0\u05e7\u05d1\u05e2\u05d5 \u05e2\u05dc \u05d9\u05d3\u05d9 \u05d1\u05e2\u05dc\u05d9 \u05d4\u05d6\u05db\u05d5\u05d9\u05d5\u05ea \u05d5\u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea.\u05dc\u05ea\u05e0\u05d0\u05d9 \u05d4\u05e9\u05d9\u05de\u05d5\u05e9 \u05d4\u05de\u05dc\u05d0\u05d9\u05dd \u05d9\u05e9 \u05dc\u05e2\u05d9\u05d9\u05df \u05d1\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9.",
+    "lds50": "No restrictions;",
+    "lds46": "image",
+    "type": "sheet",
+    "source": "\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea",
+    "title": "\u05e1\u05d9\u05e4\u05d5\u05e8\u05d5 \u05e9\u05dc \u05e1\u05d5\u05e1.",
+    "publisher": "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df \u05d4\u05de\u05e8\u05d0\u05d5\u05ea, \u05de\u05d2'\u05d0\u05e8",
+    "lds03": "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df",
+    "lds08": "700278377",
+    "lds05": "\u05d4\u05e6\u05d2\u05d4",
+    "lds21": "http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NNL_Ephemera&docId=NNL_Ephemera700278377",
+    "lds41": "http://rosetta.nli.org.il/delivery/DeliveryManagerServlet?dps_func=thumbnail&dps_pid=IE11624937"
+  },
+  "addata": {
+    "format": "book",
+    "pub": "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df \u05d4\u05de\u05e8\u05d0\u05d5\u05ea, \u05de\u05d2'\u05d0\u05e8",
+    "btitle": "\u05e1\u05d9\u05e4\u05d5\u05e8\u05d5 \u05e9\u05dc \u05e1\u05d5\u05e1.",
+    "addtitle": "\u0642\u0635\u0629 \u062d\u0635\u0627\u0646"
+  },
+  "dedup": {
+    "t": "99"
+  },
+  "search": {
+    "searchscope": "NNL_Ephemera",
+    "title": "\u05e1\u05d9\u05e4\u05d5\u05e8\u05d5 \u05e9\u05dc \u05e1\u05d5\u05e1.",
+    "subject": [
+      "\u05d4\u05e6\u05d2\u05d4",
+      "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df"
+    ],
+    "addtitle": "\u0642\u0635\u0629 \u062d\u0635\u0627\u0646",
+    "lsr08": "\u05e1\u05d9\u05e4\u05d5\u05e8\u05d5 \u05e9\u05dc \u05e1\u05d5\u05e1",
+    "sourceid": "NNL_Ephemera",
+    "alttitle": "\u0642\u0635\u0629 \u062d\u0635\u0627\u0646",
+    "general": [
+      "ephemera",
+      "\u05de\u05d5\u05de\u05dc\u05e6\u05d9\u05dd\u05dc\u05e4\u05ea\u05d9\u05d7\u05d4",
+      "\u05db\u05e8\u05d6\u05d5\u05ea",
+      "\u05d0\u05d9\u05df \u05e4\u05e8\u05d8\u05d9 \u05d9\u05d5\u05e6\u05e8",
+      "\u05d0\u05de\u05e0\u05d5\u05ea",
+      "\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea",
+      "Ephemera Collection - The National Library of Israel"
+    ],
+    "creatorcontrib": "\u05d0\u05d9\u05df \u05e4\u05e8\u05d8\u05d9 \u05d9\u05d5\u05e6\u05e8",
+    "recordid": "NNL_Ephemera700278377",
+    "lsr03": "700278377",
+    "lsr01": "\u05ea\u05d9\u05d0\u05d8\u05e8\u05d5\u05df \u05d4\u05de\u05e8\u05d0\u05d5\u05ea, \u05de\u05d2'\u05d0\u05e8.",
+    "scope": "NNL_Ephemera",
+    "rsrctype": [
+      "sheet",
+      "SHEET"
+    ]
+  },
+  "delivery": {
+    "institution": "NNL_Ephemera",
+    "delcategory": "Online Resource"
+  },
+  "frbr": {
+    "t": "99"
+  },
+  "control": {
+    "recordid": "NNL_Ephemera700278377",
+    "originalsourceid": "NNL03",
+    "ilsapiid": "NNL03700278377",
+    "sourcerecordid": "700278377",
+    "sourceid": "NNL_Ephemera",
+    "sourcesystem": "Aleph",
+    "sourceformat": "MARC21"
+  },
+  "links": {
+    "lln01": "$$TTT_Terms$$D\u05ea\u05e0\u05d0\u05d9 \u05e9\u05d9\u05de\u05d5\u05e9 - \u05dc\u05e7\u05e8\u05d9\u05d0\u05d4 \u05dc\u05d7\u05e5 \u05db\u05d0\u05df",
+    "linktoholdings": "$$Taleph_holdings",
+    "linktorsrc": "$$Tnli_Ephemera_linktorscr2$$1",
+    "backlink": "$$Taleph_backlink$$Ebacklink",
+    "openurl": [
+      "$$TNLI_Ephemera_Collection$$1\u05d0\u05d5\u05e1\u05e3 \u05d4\u05d0\u05e4\u05de\u05e8\u05d4 - \u05d4\u05e1\u05e4\u05e8\u05d9\u05d9\u05d4 \u05d4\u05dc\u05d0\u05d5\u05de\u05d9\u05ea",
+      "$$TNLI_Ephemera_Collection$$1Ephemera Collection - The National Library of Israel"
+    ],
+    "openurlfulltext": "$$Topenurlfull_journal",
+    "thumbnail": "$$Uhttp://rosetta.nli.org.il/delivery/DeliveryManagerServlet?dps_func=thumbnail&dps_pid=IE11624937"
+  }
+}

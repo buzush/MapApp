@@ -3,10 +3,23 @@
 
 {% block content %}
 
-    <form action="{% url 'create_content' view.site.id %}">
+    <h1>
+        <a href="{{ view.site.get_absolute_url }}">
+            {{ view.site }}
+        </a>
+        &gt;
+        {% if form.instance.id %}
+            {% blocktrans %}Edit Content{% endblocktrans %}
+        {% else %}
+            {% blocktrans %}Add Content{% endblocktrans %}
+        {% endif %}
+    </h1>
+
+    <form method="post">
+        {% csrf_token %}
         {{ form.media }}
         {% bootstrap_form form %}
-        <button>{% trans "Go Fetch!" %}</button>
+        <button class="btn btn-primary btn-xl">{% trans "Go Fetch!" %}</button>
     </form>
 
 {% endblock %}

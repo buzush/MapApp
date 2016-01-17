@@ -2,19 +2,23 @@ class MediaType:
     AUDIO = "audio"
     IMAGE = "image"
     ARCHIVE = "archive"
+    PHOTO = "photograph"
     MAP = "map"
-    TRV = "travel"
-    VID  = "video"
-    OTR = "other"
+    TRAVEL = "travel"
+    VIDEO  = "video"
+    SHEET = "sheet"
+    OTHER = "other"
 
     choices = (
         (AUDIO, "שיר"),
         (IMAGE, "תמונה"),
         (ARCHIVE, "פריט ארכיון"),
+        (PHOTO, "צילום"),
         (MAP, "מפה"),
-        (TRV, "יומן מסע"),
-        (VID, "קטע וידאו"),
-        (OTR, "אחר"),
+        (TRAVEL, "יומן מסע"),
+        (VIDEO, "קטע וידאו"),
+        (SHEET, "גליון"),
+        (OTHER, "אחר"),
     )
 
     all = {x[0] for x in choices}
