@@ -1,0 +1,299 @@
+{
+  "sort": {
+    "creationdate": "12600000",
+    "author": "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105",
+    "title": "[Berlin Rashi map for Ezekiel 45:1-8].",
+    "lso01": "12600000"
+  },
+  "addata": {
+    "risdate": "1260",
+    "btitle": "[Berlin Rashi map for Ezekiel 45:1-8].",
+    "date": "1260",
+    "format": "book",
+    "addau": [
+      "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105",
+      "\u0420\u0430\u0448\u0438, 1040-1105",
+      "Rashi, 1040-1105",
+      "\u05e9\u05dc\u05de\u05d4, \u05d9\u05e8\u05d7\u05d9",
+      "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9)",
+      "\u05e8\u05e9\"\u05d9",
+      "\u05e9\u05dc\u05de\u05d4 \u05d9\u05e6\u05d7\u05e7\u05d9, 1040-1105",
+      "\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4 (\u05e8\u05e9\"\u05d9), 1040-1105",
+      "\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105",
+      "\u05d9\u05e8\u05d7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105",
+      "\u0428\u0435\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438 \u0420\u0430\u0448\u0438, 1040-1105",
+      "\u0420\u0430\u0431\u0435\u0439\u043d\u0443 \u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105",
+      "\u0428\u043b\u043e\u043c\u043e \u0411\u0435\u043d \u0418\u0446\u0445\u0430\u043a \u0420\u0430\u0448\u0438, 1040-1105",
+      "\u0421\u043e\u043b\u043e\u043c\u043e\u043d \u0411\u0435\u043d \u0418\u0441\u0430\u0430\u043a, 1040-1105",
+      "\u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105",
+      "Rachi, 1040-1105",
+      "Solomon Jarhi, 1040-1105",
+      "Solomon B. Isaac, 1040-1105",
+      "Rashi di Troyes, 1040-1105",
+      "Jarchi, Salomon, 1040-1105",
+      "Solomon ben Isaac, 1040-1105",
+      "Raschi, 1040-1105",
+      "Rachi, Chelomoh Ben Isaac, 1040-1105",
+      "Schelomon Jarchus, 1040-1105",
+      "Solomon Fils D'isaac de Troyes, 1040-1105",
+      "Shelomo Ben Yizhaq, 1040-1105",
+      "Chelomoh Ben Isaac Rachi, 1040-1105",
+      "Rashie, 1040-1105",
+      "Yarchi, Solomon, 1040-1105",
+      "Solomon Jarchi, 1040-1105",
+      "Solomon ben Isaac, called RaSHI, 1040-1105"
+    ]
+  },
+  "delivery": {
+    "delcategory": "Physical Item",
+    "institution": "NNL_MAPS"
+  },
+  "links": {
+    "openurlfulltext": "$$Topenurlfull_journal",
+    "linktoholdings": "$$Taleph_holdings",
+    "backlink": "$$Taleph_backlink$$Ebacklink"
+  },
+  "facets": {
+    "creationdate": "1260",
+    "language": "heb",
+    "genre": [
+      "Maps",
+      "\u05de\u05e4\u05d5\u05ea"
+    ],
+    "lfc06": "\u05e8\u05d0\u05dc\u05d9\u05e1\u05d8\u05d9\u05ea",
+    "prefilter": "maps",
+    "creatorcontrib": "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7",
+    "frbrtype": "6",
+    "rsrctype": "maps",
+    "topic": "Jerusalem (Israel)\u2013Maps",
+    "lfc08": "[\u05dc\u05dc\u05d0]",
+    "frbrgroupid": "324492520"
+  },
+  "ranking": {
+    "booster1": "1",
+    "booster2": "1"
+  },
+  "control": {
+    "sourceformat": "MARC21",
+    "sourceid": "NNL_MAPS",
+    "sourcesystem": "Aleph",
+    "sourcerecordid": "003874686",
+    "recordid": "NNL_MAPS003874686",
+    "ilsapiid": "NNL01003874686",
+    "originalsourceid": "NNL01"
+  },
+  "display": {
+    "creationdate": "1260",
+    "language": "heb",
+    "format": "Online resource..",
+    "source": "The National Library of Israel",
+    "lds46": "IIPIMAGE_COMPLEX",
+    "lds21": "http://primo.nli.org.il/primo_library/libweb/action/dlDisplay.do?vid=NLI&docId=NNL_MAPS003874686",
+    "lds05": [
+      "Manuscript.",
+      "Digital image of the original in Berlin, Staatsbibliothek, MS Or. Fol. 122, fol. 68v."
+    ],
+    "subject": "Jerusalem (Israel) -- Maps",
+    "type": "map",
+    "contributor": "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105",
+    "lds37": "Berlin, Staatsbibliothek.",
+    "lds08": "003874686",
+    "title": "[Berlin Rashi map for Ezekiel 45:1-8]."
+  },
+  "frbr": {
+    "t": "99",
+    "k1": [
+      "$$K\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 \u05e8\u05e9\"\u05d9 1040 1105$$AA",
+      "$$K\u0440\u0430\u0448\u0438 1040 1105$$AA",
+      "$$Krashi 1040 1105$$AA",
+      "$$K\u05e9\u05dc\u05de\u05d4 \u05d9\u05e8\u05d7\u05d9$$AA",
+      "$$K\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 \u05e8\u05e9\"\u05d9$$AA",
+      "$$K\u05e8\u05e9\"\u05d9$$AA",
+      "$$K\u05e9\u05dc\u05de\u05d4 \u05d9\u05e6\u05d7\u05e7\u05d9 1040 1105$$AA",
+      "$$K\u05d9\u05e6\u05d7\u05e7\u05d9 \u05e9\u05dc\u05de\u05d4 \u05e8\u05e9\"\u05d9 1040 1105$$AA",
+      "$$K\u05d9\u05e6\u05d7\u05e7\u05d9 \u05e9\u05dc\u05de\u05d4 1040 1105$$AA",
+      "$$K\u05d9\u05e8\u05d7\u05d9 \u05e9\u05dc\u05de\u05d4 1040 1105$$AA",
+      "$$K\u0448\u0435\u043b\u043e\u043c\u043e \u0438\u0446\u0445\u0430\u043a\u0438 \u0440\u0430\u0448\u0438 1040 1105$$AA",
+      "$$K\u0440\u0430\u0431\u0435\u0439\u043d\u0443 \u0448\u043b\u043e\u043c\u043e \u0438\u0446\u0445\u0430\u043a\u0438 1040 1105$$AA",
+      "$$K\u0448\u043b\u043e\u043c\u043e \u0431\u0435\u043d \u0438\u0446\u0445\u0430\u043a \u0440\u0430\u0448\u0438 1040 1105$$AA",
+      "$$K\u0441\u043e\u043b\u043e\u043c\u043e\u043d \u0431\u0435\u043d \u0438\u0441\u0430\u0430\u043a 1040 1105$$AA",
+      "$$K\u0448\u043b\u043e\u043c\u043e \u0438\u0446\u0445\u0430\u043a\u0438 1040 1105$$AA",
+      "$$Krachi 1040 1105$$AA",
+      "$$Ksolomon jarhi 1040 1105$$AA",
+      "$$Ksolomon b isaac 1040 1105$$AA",
+      "$$Krashi di troyes 1040 1105$$AA",
+      "$$Kjarchi salomon 1040 1105$$AA",
+      "$$Ksolomon ben isaac 1040 1105$$AA",
+      "$$Kraschi 1040 1105$$AA",
+      "$$Krachi chelomoh ben isaac 1040 1105$$AA",
+      "$$Kschelomon jarchus 1040 1105$$AA",
+      "$$Ksolomon fils d'isaac de troyes 1040 1105$$AA",
+      "$$Kshelomo ben yizhaq 1040 1105$$AA",
+      "$$Kchelomoh ben isaac rachi 1040 1105$$AA",
+      "$$Krashie 1040 1105$$AA",
+      "$$Kyarchi solomon 1040 1105$$AA",
+      "$$Ksolomon jarchi 1040 1105$$AA",
+      "$$Ksolomon ben isaac called rashi 1040 1105$$AA"
+    ],
+    "k3": "$$Kberlin rashi map for ezekiel 45 1 8$$AT"
+  },
+  "browse": {
+    "subject": [
+      "$$DJerusalem (Israel) -- Maps$$EJerusalem (Israel) Maps$$INNL10000936483$$PY M",
+      "$$D\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd (\u05d9\u05e9\u05e8\u05d0\u05dc) -- \u05de\u05e4\u05d5\u05ea$$E\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd (\u05d9\u05e9\u05e8\u05d0\u05dc) \u05de\u05e4\u05d5\u05ea$$INNL10000936483$$PY"
+    ],
+    "institution": "NNL_MAPS",
+    "title": "$$D[Berlin Rashi map for Ezekiel 45:1-8]$$E[Berlin Rashi map for Ezekiel 45:1-8]",
+    "author": [
+      "$$D\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105$$E\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105$$INNL10000109658$$PY M",
+      "$$D\u0420\u0430\u0448\u0438, 1040-1105$$E\u0420\u0430\u0448\u0438, 1040-1105$$INNL10000109658$$PY",
+      "$$DRashi, 1040-1105$$ERashi, 1040-1105$$INNL10000109658$$PY",
+      "$$D\u05e9\u05dc\u05de\u05d4, \u05d9\u05e8\u05d7\u05d9$$E\u05e9\u05dc\u05de\u05d4, \u05d9\u05e8\u05d7\u05d9$$INNL10000109658$$PN",
+      "$$D\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105$$E\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105$$INNL10000109658$$PN",
+      "$$D\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9)$$E\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9)$$INNL10000109658$$PN",
+      "$$D\u05e8\u05e9\"\u05d9$$E\u05e8\u05e9\"\u05d9$$INNL10000109658$$PN",
+      "$$D\u05e9\u05dc\u05de\u05d4 \u05d9\u05e6\u05d7\u05e7\u05d9, 1040-1105$$E\u05e9\u05dc\u05de\u05d4 \u05d9\u05e6\u05d7\u05e7\u05d9, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4 (\u05e8\u05e9\"\u05d9), 1040-1105$$E\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4 (\u05e8\u05e9\"\u05d9), 1040-1105$$INNL10000109658$$PN",
+      "$$D\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105$$E\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u05d9\u05e8\u05d7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105$$E\u05d9\u05e8\u05d7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u0428\u0435\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438 \u0420\u0430\u0448\u0438, 1040-1105$$E\u0428\u0435\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438 \u0420\u0430\u0448\u0438, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u0420\u0430\u0431\u0435\u0439\u043d\u0443 \u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105$$E\u0420\u0430\u0431\u0435\u0439\u043d\u0443 \u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u0428\u043b\u043e\u043c\u043e \u0411\u0435\u043d \u0418\u0446\u0445\u0430\u043a \u0420\u0430\u0448\u0438, 1040-1105$$E\u0428\u043b\u043e\u043c\u043e \u0411\u0435\u043d \u0418\u0446\u0445\u0430\u043a \u0420\u0430\u0448\u0438, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u0421\u043e\u043b\u043e\u043c\u043e\u043d \u0411\u0435\u043d \u0418\u0441\u0430\u0430\u043a, 1040-1105$$E\u0421\u043e\u043b\u043e\u043c\u043e\u043d \u0411\u0435\u043d \u0418\u0441\u0430\u0430\u043a, 1040-1105$$INNL10000109658$$PN",
+      "$$D\u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105$$E\u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105$$INNL10000109658$$PN",
+      "$$DRachi, 1040-1105$$ERachi, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon Jarhi, 1040-1105$$ESolomon Jarhi, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon B. Isaac, 1040-1105$$ESolomon B. Isaac, 1040-1105$$INNL10000109658$$PN",
+      "$$DRashi di Troyes, 1040-1105$$ERashi di Troyes, 1040-1105$$INNL10000109658$$PN",
+      "$$DJarchi, Salomon, 1040-1105$$EJarchi, Salomon, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon ben Isaac, 1040-1105$$ESolomon ben Isaac, 1040-1105$$INNL10000109658$$PN",
+      "$$DRaschi, 1040-1105$$ERaschi, 1040-1105$$INNL10000109658$$PN",
+      "$$DRachi, Chelomoh Ben Isaac, 1040-1105$$ERachi, Chelomoh Ben Isaac, 1040-1105$$INNL10000109658$$PN",
+      "$$DSchelomon Jarchus, 1040-1105$$ESchelomon Jarchus, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon Fils D'isaac de Troyes, 1040-1105$$ESolomon Fils D'isaac de Troyes, 1040-1105$$INNL10000109658$$PN",
+      "$$DShelomo Ben Yizhaq, 1040-1105$$EShelomo Ben Yizhaq, 1040-1105$$INNL10000109658$$PN",
+      "$$DChelomoh Ben Isaac Rachi, 1040-1105$$EChelomoh Ben Isaac Rachi, 1040-1105$$INNL10000109658$$PN",
+      "$$DRashie, 1040-1105$$ERashie, 1040-1105$$INNL10000109658$$PN",
+      "$$DYarchi, Solomon, 1040-1105$$EYarchi, Solomon, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon Jarchi, 1040-1105$$ESolomon Jarchi, 1040-1105$$INNL10000109658$$PN",
+      "$$DSolomon ben Isaac, called RaSHI, 1040-1105$$ESolomon ben Isaac, called RaSHI, 1040-1105$$INNL10000109658$$PN"
+    ]
+  },
+  "dedup": {
+    "t": "99",
+    "f7": "berlin rashi map for ezekiel 45 1 8",
+    "f9": "Online resource.",
+    "c4": "1260",
+    "c3": "mngberlinrashimapforezekiel4518",
+    "f6": "1260",
+    "f5": "berlinrashimapforezekiel4518"
+  },
+  "search": {
+    "creatorcontrib": [
+      "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9), 1040-1105",
+      "\u0420\u0430\u0448\u0438, 1040-1105",
+      "Rashi, 1040-1105",
+      "\u05e9\u05dc\u05de\u05d4, \u05d9\u05e8\u05d7\u05d9",
+      "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 (\u05e8\u05e9\"\u05d9)",
+      "\u05e8\u05e9\"\u05d9",
+      "\u05e9\u05dc\u05de\u05d4 \u05d9\u05e6\u05d7\u05e7\u05d9, 1040-1105",
+      "\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4 (\u05e8\u05e9\"\u05d9), 1040-1105",
+      "\u05d9\u05e6\u05d7\u05e7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105",
+      "\u05d9\u05e8\u05d7\u05d9, \u05e9\u05dc\u05de\u05d4, 1040-1105",
+      "\u0428\u0435\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438 \u0420\u0430\u0448\u0438, 1040-1105",
+      "\u0420\u0430\u0431\u0435\u0439\u043d\u0443 \u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105",
+      "\u0428\u043b\u043e\u043c\u043e \u0411\u0435\u043d \u0418\u0446\u0445\u0430\u043a \u0420\u0430\u0448\u0438, 1040-1105",
+      "\u0421\u043e\u043b\u043e\u043c\u043e\u043d \u0411\u0435\u043d \u0418\u0441\u0430\u0430\u043a, 1040-1105",
+      "\u0428\u043b\u043e\u043c\u043e \u0418\u0446\u0445\u0430\u043a\u0438, 1040-1105",
+      "Rachi, 1040-1105",
+      "Solomon Jarhi, 1040-1105",
+      "Solomon B. Isaac, 1040-1105",
+      "Rashi di Troyes, 1040-1105",
+      "Jarchi, Salomon, 1040-1105",
+      "Solomon ben Isaac, 1040-1105",
+      "Raschi, 1040-1105",
+      "Rachi, Chelomoh Ben Isaac, 1040-1105",
+      "Schelomon Jarchus, 1040-1105",
+      "Solomon Fils D'isaac de Troyes, 1040-1105",
+      "Shelomo Ben Yizhaq, 1040-1105",
+      "Chelomoh Ben Isaac Rachi, 1040-1105",
+      "Rashie, 1040-1105",
+      "Yarchi, Solomon, 1040-1105",
+      "Solomon Jarchi, 1040-1105",
+      "Solomon ben Isaac, called RaSHI, 1040-1105",
+      "\u05e9\u05dc\u05de\u05d4 \u05d1\u05df \u05d9\u05e6\u05d7\u05e7 \u05e8\u05e9 quot \u05d9 1040 1105"
+    ],
+    "sourceid": "NNL_MAPS",
+    "creationdate": [
+      "1260",
+      "1330"
+    ],
+    "lsr03": [
+      "003874686",
+      "03874686",
+      "3874686"
+    ],
+    "lsr07": [
+      "[Berlin",
+      "Rashi",
+      "map",
+      "for",
+      "Ezekiel",
+      "451-8]"
+    ],
+    "rsrctype": [
+      "map",
+      "MAP"
+    ],
+    "lsr30": "NNL_MAPS003874686",
+    "searchscope": [
+      "NNL_MAPS",
+      "MAP",
+      "DIG"
+    ],
+    "general": [
+      "[Berlin Rashi map for Ezekiel 45:1-8].",
+      "heb",
+      "Manuscript.",
+      "Digital image of the original in Berlin, Staatsbibliothek, MS Or. Fol. 122, fol. 68v.",
+      "MAP",
+      "Berlin, Staatsbibliothek.",
+      "MAPS",
+      "LAORCITY"
+    ],
+    "lsr06": [
+      "[Berlin",
+      "Rashi",
+      "map",
+      "for",
+      "Ezekiel",
+      "451-8]"
+    ],
+    "startdate": "12600101",
+    "subject": [
+      "Jerusalem (Israel) Maps Y M",
+      "\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd (\u05d9\u05e9\u05e8\u05d0\u05dc) \u05de\u05e4\u05d5\u05ea Y"
+    ],
+    "lsr08": [
+      "Berlin Rashi map for Ezekiel 45 1 8",
+      "1260",
+      "Jerusalem Israel Maps Y M",
+      "\u05d9\u05e8\u05d5\u05e9\u05dc\u05d9\u05dd \u05d9\u05e9\u05e8\u05d0\u05dc \u05de\u05e4\u05d5\u05ea Y",
+      "heb",
+      "Manuscript",
+      "Digital image of the original in Berlin Staatsbibliothek MS Or Fol 122 fol 68v",
+      "MAP",
+      "Berlin Staatsbibliothek",
+      "MAPS",
+      "LAORCITY"
+    ],
+    "recordid": "NNL_MAPS003874686",
+    "enddate": "13301231",
+    "scope": [
+      "NNL_MAPS",
+      "MAP",
+      "DIG"
+    ],
+    "title": "[Berlin Rashi map for Ezekiel 45:1-8]."
+  }
+}

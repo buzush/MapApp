@@ -1,5 +1,4 @@
 from django.contrib.gis.db import models
-from django.contrib.gis.geos import Point
 from django.core.urlresolvers import reverse
 from django.utils.translation import ugettext_lazy as _
 
@@ -49,7 +48,10 @@ class Content(models.Model):
     site = models.ForeignKey(Site, verbose_name="אתר מקושר",
                              related_name="contents")
 
-    collection = models.ForeignKey(Collection, verbose_name="אוסף")
+    collection = models.ForeignKey(Collection, verbose_name="אוסף", null=True,
+                                   blank=True)
+    doc_id = models.CharField(max_length=100, null=True, blank=True)
+    full_record = models.TextField()
     content_type = models.CharField("סוג התוכן", max_length=30,
                                     choices=MediaType.choices)
     name = models.CharField("שם או כותרת", max_length=30)
@@ -61,7 +63,8 @@ class Content(models.Model):
     description = models.CharField("תיאור התוכן", max_length=200, blank=True,
                                    null=True)
     link = models.URLField("קישור לתוכן")
-    date = models.CharField("תאריך התוכן", blank=True, null=True,  max_length=40)
+    date = models.CharField("תאריך התוכן", blank=True, null=True,
+                            max_length=40)
 
     def __str__(self):
         return "{}: {}".format(

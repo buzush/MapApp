@@ -1,24 +1,25 @@
 {% extends "librarian/base.html" %}
-{% load i18n bootstrap3%}
+{% load i18n bootstrap3 %}
 {% block content %}
 
-<form method="post">
-    {% csrf_token %}
-    {{form.media}}
-       <div class="row">
-            <div class="col-md-12">
-                {% bootstrap_form_errors form "non_fields" %}
-                <p class="site_name"><b>שם האתר:</b> {{ content.site }} </p>
-                {% bootstrap_field form.name %}
-                {% bootstrap_field form.collection %}
-                {% bootstrap_field form.content_type %}
-                {% bootstrap_field form.creator %}
-                {% bootstrap_field form.creator_2 %}
-                {% bootstrap_field form.performing %}
-                {% bootstrap_field form.description %}
-                {% bootstrap_field form.link %}
-                {% bootstrap_field form.date %}
+    <h1>
+        <a href="{{ view.site.get_absolute_url }}">
+            {{ view.site }}
+        </a>
+        &gt;
+        {% if form.instance.id %}
+            {% blocktrans %}Edit Content{% endblocktrans %}
+        {% else %}
+            {% blocktrans %}Add Content{% endblocktrans %}
+        {% endif %}
+    </h1>
 
+    <form method="post" class="form-horizontal">
+        {% csrf_token %}
+        {{ form.media }}
+        <div class="row">
+            <div class="col-md-12">
+                {% bootstrap_form form %}
             </div>
         </div>
         <button>{% trans "Save" %}</button>

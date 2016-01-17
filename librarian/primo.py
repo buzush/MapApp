@@ -8,9 +8,10 @@ BASE_URL = "http://primo.nli.org.il/PrimoWebServices/xservice/search/full"
 def extract_doc_id(url):
     qs = urlparse(url).query
     d = parse_qs(qs)
-    if 'docId' not in d:
+    ids = d.get('doc') or d.get('docId')
+    if not ids:
         raise KeyError("doc id not found in url: {}".format(url))
-    return d["docId"][0]
+    return ids[0]
 
 
 def primo_request(doc_id):
