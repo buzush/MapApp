@@ -2,11 +2,10 @@ class MediaType:
     AUDIO = "audio"
     IMAGE = "image"
     ARCHIVE = "archive"
-
-    MAP = "MAP"
-    TRV = "TRV"
-    VID = "VID"
-    OTR = "OTR"
+    MAP = "map"
+    TRV = "travel"
+    VID  = "video"
+    OTR = "other"
 
     choices = (
         (AUDIO, "שיר"),
