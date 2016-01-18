@@ -8,8 +8,10 @@ class MediaType:
     VIDEO  = "video"
     SHEET = "sheet"
     OTHER = "other"
+    MANUSCRIPT = "manuscript"
 
     choices = (
+        (OTHER, "אחר"),
         (AUDIO, "שיר"),
         (IMAGE, "תמונה"),
         (ARCHIVE, "פריט ארכיון"),
@@ -18,7 +20,8 @@ class MediaType:
         (TRAVEL, "יומן מסע"),
         (VIDEO, "קטע וידאו"),
         (SHEET, "גליון"),
-        (OTHER, "אחר"),
+        (MANUSCRIPT, "כתב יד"),
     )
+
 
     all = {x[0] for x in choices}

@@ -53,7 +53,8 @@ class Content(models.Model):
     doc_id = models.CharField(max_length=100, null=True, blank=True)
     full_record = models.TextField()
     content_type = models.CharField("סוג התוכן", max_length=30,
-                                    choices=MediaType.choices)
+                                    choices=MediaType.choices,
+                                    default=MediaType.choices[0][0])
     name = models.CharField("שם או כותרת", max_length=30)
     creator = models.CharField("יוצר/ת", max_length=14, blank=True, null=True)
     creator_2 = models.CharField("יוצר/ת נוספ/ת", max_length=30, blank=True,

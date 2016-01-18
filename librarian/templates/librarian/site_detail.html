@@ -74,7 +74,7 @@
       <div class="panel panel-default">
           <div class="panel-heading">
             <h4 class="panel-title">
-                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">
+                <a class="accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapse-{{content.id}}">
                     <i class="fa fa-expand"></i> {{ content.name }}
                 </a>
                 <span class="pull-right">
@@ -93,7 +93,7 @@
             </h4>
           </div>
 
-          <div id="collapseOne" class="panel-collapse collapse">
+          <div id="collapse-{{content.id}}" class="panel-collapse collapse">
             <div class="panel-body">
                     <p><b>אוסף: </b>{{content.content_collection}}</p>
                     <p><b>סוג התוכן: </b>{{content.content_type}}</p>
