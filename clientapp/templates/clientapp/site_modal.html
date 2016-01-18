@@ -37,9 +37,8 @@
             <div class=".col-xs-3 .col-md-3">
                 <a type="button" class="btn btn-primary" target="_blank" href="http://www.facebook.com/sharer/sharer.php?u='עברתי ב{{site.name}} והספריה הלאומיות שלחה לי את זה: {{site.get_modal_url}}'"><i class="fa fa-facebook"></i>פייסבוק</a>
                 <a type="button" class="btn btn-primary" target="_blank" href="mailto:?subject=סיפורי דרך, של הספריה הלאומית&body={{ site.get_modal_url }}"><i class="fa fa-envelope"></i> דוא"ל </a>
-
-                {% post_to_twitter 'עברתי ב{{site.name}} והספריה הלאומיות שלחה לי את זה: ' site.get_absolute.url "טוויטר"%}
-                <a type="button" class="btn btn-primary" target="_blank" href="whatsapp://send?text=עברתי ב{{site.name}} והספריה הלאומית הציעה לי את זה: {{content.link}}" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> וואטסאפ</a>
+                <a type="button" class="btn btn-primary" target="_blank" href="https://twitter.com/intent/tweet?text=עברתי ב{{site.name}} והספריה הלאומיות שלחה לי את זה: {{ site.get_modal_url }}"><i class="fa fa-twitter"></i> טוויטר</a>
+                <a type="button" class="btn btn-primary" target="_blank" href="whatsapp://send?text=עברתי ב{{site.name}} והספריה הלאומית הציעה לי את זה: {{site.get_modal_url}}" data-action="share/whatsapp/share"><i class="fa fa-whatsapp"></i> וואטסאפ</a>
                 <!--<a type="button" class="btn btn-primary" target="_blank" href="<a href='whatsapp://send?text=תראו מה הספריה הלאומית שלחה לי על [אתר]'>Hello, world!</a>"><i class="fa fa-whatsapp"></i> וואטאפ </a>-->
             </div>
 
