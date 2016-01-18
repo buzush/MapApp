@@ -9,6 +9,7 @@ class MediaType:
     SHEET = "sheet"
     OTHER = "other"
     MANUSCRIPT = "manuscript"
+    EBOOK = "ebook"
 
     choices = (
         (OTHER, "אחר"),
@@ -21,6 +22,7 @@ class MediaType:
         (VIDEO, "קטע וידאו"),
         (SHEET, "גליון"),
         (MANUSCRIPT, "כתב יד"),
+        (EBOOK, "ספר אלקטרוני"),
     )
 
 

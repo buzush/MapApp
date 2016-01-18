@@ -27,6 +27,5 @@ class PrimoURLField(forms.URLField):
             raise forms.ValidationError(_("Primo doc id not found in url"))
         return doc_id
 
-
 class FromUrlForm(forms.Form):
     doc_id = PrimoURLField(label=_("Resource URL"))
